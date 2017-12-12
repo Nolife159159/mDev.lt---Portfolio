@@ -22,7 +22,7 @@
             </button>
 
             <a class="navbar-brand" href="{{ url('/') }}">
-                {{ config('app.name', 'mD') }}
+                {{ config('app.name', 'mDedv') }}
             </a>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
