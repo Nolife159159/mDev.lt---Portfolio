@@ -8,7 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name', 'Laravel') }}</title>
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/app.scss') }}" rel="stylesheet">
 </head>
 <body>
 <div id="app" class="container-fluid">
@@ -21,8 +21,8 @@
         </button>
         <div id="navbarNavDropdown" class="navbar-collapse collapse">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home</a>
+                <i class="nav-item active">
+                    <a class="nav-link" href="#"><i class="fa fa-address-book" aria-hidden="true">Home</a></i>
                 </li>
             </ul>
             <ul class="navbar-nav">
