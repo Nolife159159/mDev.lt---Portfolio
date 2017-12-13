@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="app" class="container-fluid">
-    <nav class="navbar navbar-toggleable-sm navbar-expand-lg navbar-inverse bg-inverse navbar-light bg-faded mt-1">
+    <nav class="navbar navbar-toggleable-sm navbar-expand-lg navbar-inverse mt-1 navbar-dark bg-dark">
         <a class="navbar-brand display-inline" href="{{ url('/') }}">
             {{ config('app.name', 'Laravel') }}
         </a>
