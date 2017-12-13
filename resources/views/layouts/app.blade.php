@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="app" class="container-fluid">
-    <nav class="navbar navbar-toggleable-sm navbar-expand-lg navbar-inverse mt-1 navbar-dark bg-dark">
+    <nav class="navbar navbar-toggleable-sm navbar-expand-lg mt-1 navbar-dark bg-dark">
         <a class="navbar-brand display-inline" href="{{ url('/') }}">
             {{ config('app.name', 'Laravel') }}
         </a>
@@ -38,28 +38,30 @@
             <ul class="navbar-nav">
                 <!-- Authentication Links -->
                 @guest
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('register') }}">Register</a>
+                    <li class="btn-group">
+                        <a class="btn btn-secondary" href="{{ route('login') }}">Login</a>
+                        <a class="btn btn-secondary" href="{{ route('register') }}">Register</a>
                     </li>
                 @else
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            {{ Auth::user()->name }} <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <li class="dropdown-item">
+                    <li class="btn-group">
+                        <button class="btn btn-secondary" type="button">
+                            {{ Auth::user()->name }}
+                        </button>
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li class="dropdown-header">Your menu</li>
+
+                            <li>
                                 <a class="dropdown-item" href="#">Admin panel</a>
                             </li>
-                            <li class="dropdown-item">
+                            <li>
                                 <a class="dropdown-item" href="#">Reload page</a>
                             </li>
-
                             <li class="dropdown-divider"></li>
-                            <li class="dropdown-item">
+                            <li>
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                        document.getElementById('logout-form').submit();">
