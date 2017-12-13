@@ -4,7 +4,6 @@
 <div class="container">
     <div class="card">
         <div class="card-header">Login</div>
-
         <div class="card-block">
             <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                 {{ csrf_field() }}

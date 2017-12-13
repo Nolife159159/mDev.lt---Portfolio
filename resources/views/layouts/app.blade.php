@@ -36,7 +36,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a>
                 </li>
-
             </ul>
             <ul class="navbar-nav">
                 <!-- Authentication Links -->
