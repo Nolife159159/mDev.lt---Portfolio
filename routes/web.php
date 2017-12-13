@@ -11,10 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// baseic pages
+Route::view('/', 'pages.welcome');
+Route::view('/about-us', 'pages.about');
+Route::view('/our-work', 'pages.work');
+Route::view('/contact-us', 'pages.contact');
 
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');

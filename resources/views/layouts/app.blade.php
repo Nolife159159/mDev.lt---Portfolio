@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name') }}</title>
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
@@ -14,7 +14,7 @@
 <div id="app" class="container-fluid">
     <nav class="navbar navbar-toggleable-sm navbar-expand-lg mt-1 navbar-dark bg-dark">
         <a class="navbar-brand display-inline" href="{{ url('/') }}">
-            {{ config('app.name', 'Laravel') }}
+            {{ config('app.name') }}
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -23,16 +23,16 @@
         <div id="navbarSupportedContent" class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active ">
-                    <a class="nav-link" href="#"><i class="fa fa-home fa-2x" aria-hidden="true"></i> <span class="text-uppercase ">Homepage</span></a>
+                    <a class="nav-link" href="{{ url('/') }}"><i class="fa fa-home fa-2x" aria-hidden="true"></i> <span class="text-uppercase ">Homepage</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa fa-user fa-2x" aria-hidden="true"></i> <span class="text-uppercase ">About US</span></a>
+                    <a class="nav-link" href="{{ url('/about-us') }}"><i class="fa fa-user fa-2x" aria-hidden="true"></i> <span class="text-uppercase ">About US</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa fa-eye fa-2x" aria-hidden="true"></i> <span class="text-uppercase ">Our Work</span></a>
+                    <a class="nav-link" href="{{ url('/our-work') }}"><i class="fa fa-eye fa-2x" aria-hidden="true"></i> <span class="text-uppercase ">Our Work</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i> <span class="text-uppercase ">Contact Us</span></a>
+                    <a class="nav-link" href="{{ url('/contact-us') }}"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i> <span class="text-uppercase ">Contact Us</span></a>
                 </li>
             </ul>
             <ul class="navbar-nav">
