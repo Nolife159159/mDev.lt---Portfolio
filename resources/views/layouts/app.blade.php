@@ -12,29 +12,27 @@
 </head>
 <body>
 <div id="app" class="container-fluid">
-    <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
-        <a class="navbar-brand" href="{{ url('/') }}">
+    <nav class="navbar navbar-toggleable-sm navbar-expand-lg navbar-inverse bg-inverse navbar-light bg-faded mt-1">
+        <a class="navbar-brand display-inline" href="{{ url('/') }}">
             {{ config('app.name', 'Laravel') }}
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div id="navbarNavDropdown" class="navbar-collapse collapse">
+
+        <div id="navbarSupportedContent" class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#"><i class="fa fa-home fa-2x" aria-hidden="true"></i></a>
+                <li class="nav-item active ">
+                    <a class="nav-link" href="#"><i class="fa fa-home fa-2x" aria-hidden="true"></i> <span class="text-uppercase ">Homepage</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa fa-user fa-2x" aria-hidden="true"></i></a>
+                    <a class="nav-link" href="#"><i class="fa fa-user fa-2x" aria-hidden="true"></i> <span class="text-uppercase ">About US</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa fa-cog fa-2x" aria-hidden="true"></i></a>
+                    <a class="nav-link" href="#"><i class="fa fa-eye fa-2x" aria-hidden="true"></i> <span class="text-uppercase ">Our Work</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa fa-eye fa-2x" aria-hidden="true"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a>
+                    <a class="nav-link" href="#"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i> <span class="text-uppercase ">Contact Us</span></a>
                 </li>
             </ul>
             <ul class="navbar-nav">
@@ -46,25 +44,35 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('register') }}">Register</a>
                     </li>
-            </ul>
-            @else
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">{{ Auth::user()->name }} <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li class="dropdown-item">
-                            <a href="{{ route('logout') }}"
-                               onclick="event.preventDefault();
-                               document.getElementById('logout-form').submit();">
-                                Logout
-                            </a>
+                @else
 
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                {{ csrf_field() }}
-                            </form>
-                        </li>
-                        @endguest
-                    </ul>
-                </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{ Auth::user()->name }} <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <li class="dropdown-item">
+                                <a class="dropdown-item" href="#">Admin panel</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a class="dropdown-item" href="#">Reload page</a>
+                            </li>
+
+                            <li class="dropdown-divider"></li>
+                            <li class="dropdown-item">
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                       document.getElementById('logout-form').submit();">
+                                    Logout
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    {{ csrf_field() }}
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                 @endguest
+            </ul>
         </div>
     </nav>
     @yield('content')
