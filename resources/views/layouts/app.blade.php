@@ -21,9 +21,22 @@
         </button>
         <div id="navbarNavDropdown" class="navbar-collapse collapse">
             <ul class="navbar-nav mr-auto">
-                <i class="nav-item active">
-                    <a class="nav-link" href="#"><i class="fa fa-address-book" aria-hidden="true">Home</a></i>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#"><i class="fa fa-home fa-2x" aria-hidden="true"></i></a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa fa-user fa-2x" aria-hidden="true"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa fa-cog fa-2x" aria-hidden="true"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa fa-eye fa-2x" aria-hidden="true"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a>
+                </li>
+
             </ul>
             <ul class="navbar-nav">
                 <!-- Authentication Links -->
