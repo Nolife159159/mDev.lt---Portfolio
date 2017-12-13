@@ -11,7 +11,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-<div id="app" class="fluid-container">
+<div id="app" class="container-fluid">
     <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
         <a class="navbar-brand" href="{{ url('/') }}">
             {{ config('app.name', 'Laravel') }}
