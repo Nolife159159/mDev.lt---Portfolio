@@ -1,8 +1,6 @@
 @extends('layouts.app')
 
-<head>
-    <title>{{ config('app.name') }} - 404 Not Found</title>
-</head>
+@section('title') - 404 Not Found @endsection
 
 @section('content')
     <center>
