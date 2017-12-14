@@ -11,6 +11,11 @@ class Handler extends ExceptionHandler {
         'Symfony\Component\HttpKernel\Exception\HttpException'
     ];
 
+    protected $dontFlash = [
+        'password',
+        'password_confirmation',
+    ];
+
     public function report(Exception $e)
     {
         return parent::report($e);
