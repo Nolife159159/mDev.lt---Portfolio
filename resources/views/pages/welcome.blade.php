@@ -2,7 +2,6 @@
 
 @section('content')
     <div class="jumbotron">
-
         <h1 class="display-3">Hello, world!</h1>
         <p class="lead">We #love #coding.</p>
         <p>Check work below!</p>

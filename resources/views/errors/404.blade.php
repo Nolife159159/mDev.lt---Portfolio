@@ -3,10 +3,9 @@
 @section('title') - 404 Not Found @endsection
 
 @section('content')
-    <center>
-        <h1 style="margin:0; font-size:150px; line-height:150px; font-weight:bold;">404</h1>
-        <h2 style="margin-top:20px;font-size: 30px;">Not Found
-        </h2>
-        <p>The resource requested could not be found on this server!</p>
-    </center>
+    <div class="jumbotron text-center">
+        <h1 class="display-1 font-weight-bold">404</h1>
+        <h2 class="display-2 mt-2">Not Found</h2>
+        <p class="lead">The resource requested could not be found on this server!</p>
+    </div>
 @endsection
