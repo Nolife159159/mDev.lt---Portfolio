@@ -14,7 +14,7 @@
 // baseic pages
 Route::view('/', 'pages.welcome');
 Route::view('/about-us', 'pages.about');
-Route::view('/our-work', 'pages.work');
+Route::get('/our-work', 'WorkController@index')->name('work');
 Route::view('/contact-us', 'pages.contact');
 
 Auth::routes();

@@ -14,9 +14,9 @@ class WorkController extends Controller
      */
     public function index()
     {
-        //
-        //
-
+        // return all work
+        $works = Work::all();
+        return view('pages.work', ['works' => $works]);
     }
 
     /**
