@@ -55,7 +55,7 @@
                             <li class="dropdown-header">Your menu</li>
 
                             <li>
-                                <a class="dropdown-item" href="#">Admin panel</a>
+                                <a class="dropdown-item" href="admin">Admin panel</a>
                             </li>
                             <li>
                                 <a class="dropdown-item" href="#">Reload page</a>

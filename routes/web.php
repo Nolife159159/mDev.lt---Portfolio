@@ -11,11 +11,19 @@
 |
 */
 
-// baseic pages
+// basic pages
 Route::view('/', 'pages.welcome');
 Route::view('/about-us', 'pages.about');
-Route::get('/our-work', 'WorkController@index')->name('work');
 Route::view('/contact-us', 'pages.contact');
 
+// work
+Route::get('/our-work', 'WorkController@index');
+
+// routed auth
 Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');
+
+//work upload
+Route::get('/admin', 'AdminController@index');
+
+
+Route::get('/home', 'HomeController@index');

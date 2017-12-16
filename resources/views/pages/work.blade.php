@@ -8,7 +8,7 @@
             <h1 class="display-4">Hello, again!</h1>
             <p class="lead">Here your find our gallery and portfolio.</p>
         </div>
-        <div class="m-0 p-2 row bg-gradient-secondary clearfix">
+        <div class="m-0 pt-2 pb-2 row bg-gradient-secondary clearfix">
             @foreach ($works AS $work)
                 <img data-id="{{ $work->id }}"
                     data-toggle="modal"
