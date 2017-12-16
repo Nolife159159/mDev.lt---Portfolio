@@ -3,15 +3,11 @@
 @section('title') - About mDev @endsection
 
 @section('content')
-    <div class="card">
-        <div class="card-footer card-header text-center">About mDev</div>
-        <div class="card-body "><h4 class="card-title text-center">Some text.</h4></div>
-        <div class="card-header text-center">What we are</div>
-        <div class="card-body"><h4 class="card-title text-center">Members</h4></div>
-        <div class="row">
+    <div class="bd-example-row">
+        <div class="m-0 row bg-gradient-secondary">
             <div class="col-sm-6">
                 <div class="card">
-                    <h4 class="card-header bg-dark text-white">Katumas
+                    <h4 class="card-header bg-dark text-white">Katum
                         <div class="float-right small">
                             <a class="btn btn-raised btn-danger" href="#" title="" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
                                 <i class="fa fa-user-circle" aria-hidden="true"></i>
@@ -57,8 +53,16 @@
                     </div>
                 </div>
             </div>
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-header text-center">
+                        What do we do?
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title text-center">Some text.</h4>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="card-footer card-header text-center">What do we do?</div>
-        <div class="card-body "><h4 class="card-title text-center">Some text.</h4></div>
     </div>
 @endsection
