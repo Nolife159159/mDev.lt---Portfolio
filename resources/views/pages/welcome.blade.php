@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title') - Welcome page @endsection
+
 @section('content')
     <div class="jumbotron">
         <h1 class="display-3">Hello, world!</h1>

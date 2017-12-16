@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title') - mDev works! @endsection
+
 @section('content')
     <div class="bd-example-row">
         <div class="m-0 row bg-gradient-dark">
@@ -27,5 +29,10 @@
             </div>
         </div>
     </div>
+@endsection
 
+@section('scripts')
+    <script type="text/javascript">
+       var workData = '{{ $works }}';
+    </script>
 @endsection

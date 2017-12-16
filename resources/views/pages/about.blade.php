@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title') - About mDev @endsection
+
 @section('content')
     <div class="card">
         <div class="card-footer card-header text-center">About mDev</div>
