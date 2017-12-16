@@ -33,6 +33,6 @@
 
 @section('scripts')
     <script type="text/javascript">
-       var workData = '{{ $works }}';
+       var workData = '@php echo $works; @endphp';
     </script>
 @endsection

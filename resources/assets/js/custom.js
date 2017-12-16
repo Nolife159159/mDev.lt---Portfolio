@@ -6,5 +6,5 @@ $ ('.bd-example-modal-sm').on('show.bs.modal', function (event)
     // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
     var modal = $(this)
     modal.find('.modal-title').text('Opened image id is: ' + ImagesResourceId)
-    modal.find('.modal-body #img-id').text(ImagesResourceId)
+    modal.find('.modal-body #img-id').text(workData)
 });

@@ -8,7 +8,7 @@
         <p class="lead">We #love #coding.</p>
         <p>Check work below!</p>
         <p class="lead">
-            <a class="btn btn-secondary btn-lg" href="{{ url('/our-work') }}" role="button">Take me there!</a>
+            <a class="btn btn-danger btn-lg" href="{{ url('/our-work') }}" role="button">Take me there!</a>
         </p>
     </div>
 @endsection
