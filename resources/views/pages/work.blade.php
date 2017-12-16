@@ -31,7 +31,8 @@
                 </div>
                 <!-- body -->
                 <div class="modal-body">
-                    <div id="img-id" class="d-inline font-weight-bolder"></div>
+                    <b>Description:</b>
+                    <div id="img-description" class="d-inline font-weight-bolder"></div>
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
                             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -58,9 +59,14 @@
                             <span class="sr-only">Next</span>
                         </a>
                     </div>
+                    <b>Used languages:</b>
+                    <div id="img-lang" class="d-inline font-weight-bolder"></div>
+                    <br>
+                    <b>Coded by:</b>
+                    <div id="img-by" class="d-inline font-weight-bolder"></div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
