@@ -11,6 +11,6 @@ class Work extends Model
 
     public function user()
     {
-        return $this->has('App\User');
+        return $this->BelongsTo('App\User');
     }
 }

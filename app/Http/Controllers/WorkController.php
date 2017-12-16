@@ -14,9 +14,14 @@ class WorkController extends Controller
      */
     public function index()
     {
+        $array = [];
         // return all work
         $works = Work::all();
-        return view('pages.work', ['works' => $works]);
+        foreach ($works as $work)
+        {
+            $array [$work->id] = ['name' => $work->name, 'description' => $work->description, 'lang' => $work->lang, 'images' => $work->image_url, 'user_id' => $work->user_id, 'username' => $work->user->name];
+        }
+        return view('pages.work', ['works' => $works, 'workModalList' => json_encode($array)]);
     }
 
     /**
