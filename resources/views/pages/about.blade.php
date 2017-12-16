@@ -11,7 +11,7 @@
         <div class="row">
             <div class="col-sm-6">
                 <div class="card">
-                    <h4 class="card-header bg-dark text-white">Katum
+                    <h4 class="card-header bg-dark text-white">Katumas
                         <div class="float-right small">
                             <a class="btn btn-raised btn-danger" href="#" title="" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
                                 <i class="fa fa-user-circle" aria-hidden="true"></i>

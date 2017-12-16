@@ -39,16 +39,16 @@
                 <!-- Authentication Links -->
                 @guest
                     <li class="btn-group">
-                        <a class="btn btn-secondary" href="{{ route('login') }}">Login</a>
-                        <a class="btn btn-secondary" href="{{ route('register') }}">Register</a>
+                        <a class="btn btn-danger" href="{{ route('login') }}">Login</a>
+                        <a class="btn btn-danger" href="{{ route('register') }}">Register</a>
                     </li>
                 @else
 
                     <li class="btn-group">
-                        <button class="btn btn-secondary" type="button">
+                        <button class="btn btn-danger" type="button">
                             {{ Auth::user()->name }}
                         </button>
-                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="sr-only">Toggle Dropdown</span>
                         </button>
                         <ul class="dropdown-menu dropdown-menu-right">
