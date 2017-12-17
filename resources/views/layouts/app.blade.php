@@ -23,16 +23,16 @@
         <div id="navbarSupportedContent" class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active m-2">
-                    <a class="nav-link" href="{{ url('/') }}"><i class="fa fa-home fa-2x text-danger" aria-hidden="true"></i> <span class="text-uppercase border border-danger border-right-0 border-top-0 border-left-0">Homepage</span></a>
+                    <a class="nav-link" href="{{ url('/') }}"><i class="fa fa-home fa-1x text-danger" aria-hidden="true"></i> <span class="text-uppercase border border-danger border-right-0 border-top-0 border-left-0">Homepage</span></a>
                 </li>
                 <li class="nav-item m-2">
-                    <a class="nav-link" href="{{ url('/about-us') }}"><i class="fa fa-user fa-2x text-danger" aria-hidden="true"></i> <span class="text-uppercase border border-danger border-right-0 border-top-0 border-left-0">About US</span></a>
+                    <a class="nav-link" href="{{ url('/about-us') }}"><i class="fa fa-user fa-1x text-danger" aria-hidden="true"></i> <span class="text-uppercase border border-danger border-right-0 border-top-0 border-left-0">About US</span></a>
                 </li>
                 <li class="nav-item m-2">
-                    <a class="nav-link" href="{{ url('/our-work') }}"><i class="fa fa-eye fa-2x text-danger" aria-hidden="true"></i> <span class="text-uppercase border border-danger border-right-0 border-top-0 border-left-0">Our Work</span></a>
+                    <a class="nav-link" href="{{ url('/our-work') }}"><i class="fa fa-eye fa-1x text-danger" aria-hidden="true"></i> <span class="text-uppercase border border-danger border-right-0 border-top-0 border-left-0">Our Work</span></a>
                 </li>
                 <li class="nav-item m-2">
-                    <a class="nav-link" href="{{ url('/contact-us') }}"><i class="fa fa-envelope fa-2x text-danger" aria-hidden="true"></i> <span class="text-uppercase border border-danger border-right-0 border-top-0 border-left-0">Contact Us</span></a>
+                    <a class="nav-link" href="{{ url('/contact-us') }}"><i class="fa fa-envelope fa-1x text-danger" aria-hidden="true"></i> <span class="text-uppercase border border-danger border-right-0 border-top-0 border-left-0">Contact Us</span></a>
                 </li>
             </ul>
             <ul class="navbar-nav">
