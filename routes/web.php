@@ -24,6 +24,7 @@ Auth::routes();
 
 //work upload
 Route::get('/admin', 'AdminController@index');
+Route::get('/upload', 'UploadController@index');
 
 
 Route::get('/home', 'HomeController@index');
