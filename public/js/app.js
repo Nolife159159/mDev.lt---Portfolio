@@ -46850,6 +46850,13 @@ $('.bd-example-modal-sm').on('show.bs.modal', function (event) {
     modal.find('.modal-body #img-by').text(objectData.username);
 });
 
+$('#v-pills-tab a').on('click', function (e) {
+    e.preventDefault();
+    $(this).tab('show');
+    $('#v-pills-tab a').removeClass("active btn-danger");
+    $(this).addClass("active btn-danger");
+});
+
 /***/ }),
 /* 44 */
 /***/ (function(module, exports) {

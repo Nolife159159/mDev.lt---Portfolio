@@ -5,7 +5,7 @@
 @section('content')
     <div class="container-fluid">
         <div  class="row">
-            <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-dark sidebar">
+            <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-dark sidebar h-100">
                 <ul class="nav nav-pills flex-column">
                     <li class="nav-item">
                         <a class="nav-link text-white"  href="{{ url('/admin') }}"><i class="fa fa-tachometer fa-1x text-danger" aria-hidden="true"></i> Overview</a>
