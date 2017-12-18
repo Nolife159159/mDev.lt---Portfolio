@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title') - Administrator page! @endsection
+@section('title', ' - Administrator page!')
 
 @section('content')
     <div class="bd-example-row bg-dark">
@@ -21,7 +21,7 @@
                             @slot('title')
                                 Overview panel
                             @endslot
-                    <p class="lead">Under construction!</p>
+                        <p class="lead">Under construction!</p>
                         @endcomponent
                     </div>
                     <div class="tab-pane fade bg-gradient-secondary" id="v-pills-upload" role="tabpanel" aria-labelledby="v-pills-profile-tab">

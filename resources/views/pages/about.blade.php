@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title') - About mDev @endsection
+@section('title', ' - About mDev')
 
 @section('content')
     <div class="bd-example-row">

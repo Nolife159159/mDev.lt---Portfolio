@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title') - 404 Not Found @endsection
+@section('title', ' - 404 Not Found')
 
 @section('content')
     <div class="jumbotron text-center">

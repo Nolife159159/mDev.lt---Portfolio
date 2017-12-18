@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title') - Welcome page @endsection
+@section('title', ' - Welcome page')
 
 @section('content')
 <div class="bd-example-row">
