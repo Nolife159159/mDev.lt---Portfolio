@@ -27,4 +27,4 @@ Route::get('/admin', 'AdminController@index');
 Route::get('/admin/upload', 'UploadController@index');
 
 
-Route::get('/home', 'HomeController@index');
+Route::redirect('/home', '/admin');

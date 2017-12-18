@@ -4,10 +4,8 @@
 
 @section('content')
     <div class="bd-example-row">
-        <div class="p-5 m-0 bg-gradient-secondary">
-            <div class="jumbotron bg-gradient-secondary">
-                <h1 class="display-3">Contacts page!</h1>
-            </div>
+        <div class="jumbotron bg-gradient-dark rounded-0 pl-5">
+            <h1 class="display-3">Contacts page</h1>
         </div>
     </div>
 @endsection

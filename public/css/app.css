@@ -1,5 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@charset "UTF-8";
 
+html {
+  min-height: 100%;
+  background-image: url("/images/bg.png");
+  background-size: cover;
+}
+
 .user-l {
   padding-right: 6px;
 }
@@ -13377,5 +13383,9 @@ a.text-dark:hover {
 .highlight pre code {
   font-size: inherit;
   color: #212529;
+}
+
+body {
+  background-color: transparent;
 }
 
