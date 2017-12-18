@@ -19,7 +19,7 @@ class CreateWorkTable extends Migration
             $table->string('name');
             $table->longText('description');
             $table->string('lang');
-            $table->string('image_url');
+            $table->longText('image_url');
 
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');

@@ -33,6 +33,19 @@ html {
   font-size: 18px;
 }
 
+.work-block {
+  height: 200px;
+  width: 200px;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+.work-block:hover {
+  border: blue 1px dashed !important;
+  -webkit-transform: translate(0, -5px);
+          transform: translate(0, -5px);
+}
+
 /*!
  * Bootstrap v4.0.0-beta.2 (https://getbootstrap.com)
  * Copyright 2011-2017 The Bootstrap Authors

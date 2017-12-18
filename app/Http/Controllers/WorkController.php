@@ -19,7 +19,7 @@ class WorkController extends Controller
         $works = Work::all();
         foreach ($works as $work)
         {
-            $array [$work->id] = ['name' => $work->name, 'description' => $work->description, 'lang' => $work->lang, 'images' => $work->image_url, 'user_id' => $work->user_id, 'username' => $work->user->name];
+            $array [$work->id] = ['name' => $work->name, 'description' => $work->description, 'lang' => $work->lang, 'images' => json_decode($work->image_url), 'user_id' => $work->user_id, 'username' => $work->user->name];
         }
         return view('pages.work', ['works' => $works, 'workModalList' => json_encode($array)]);
     }

@@ -3,30 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Admin;
+use App\Work;
+use Auth;
 use Illuminate\Http\Request;
 
 class UploadController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        return view('admin.upload');
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -35,7 +17,14 @@ class UploadController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        foreach ($request->photos as $photo)
+        {
+            $filename = $photo->store('public');
+            $my_name [] = str_replace('public', 'storage', $filename);
+        }
+        $imagesJson = json_encode($my_name);
+        Work::create(['name' => $request->name, 'description' => $request->desc, 'lang' => $request->langs, 'image_url' => $imagesJson, 'user_id' => Auth::user()->id]);
+        return back();
     }
 
     /**

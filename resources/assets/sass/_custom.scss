@@ -34,3 +34,13 @@ html {
     font-size: 18px;
   }
 }
+
+.work-block {
+  height: 200px;
+  width: 200px;
+  transition: all .3s ease-out;
+  &:hover {
+    border: blue 1px dashed!important;
+    transform: translate(0, -5px);
+  }
+}
