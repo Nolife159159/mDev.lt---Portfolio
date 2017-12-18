@@ -8,7 +8,8 @@
             <div class="col-3 bg-gradient-dark">
                 <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                     <a class="nav-link active btn-danger text-white" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true"><i class="fa fa-dashcube fa-1x" aria-hidden="true"></i> Overview</a>
-                    <a class="nav-link text-white" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false"><i class="fa fa-upload fa-1x" aria-hidden="true"></i> Upload new work</a>
+                    <a class="nav-link text-white" id="v-pills-upload-tab" data-toggle="pill" href="#v-pills-upload" role="tab" aria-controls="v-pills-upload" aria-selected="false"><i class="fa fa-upload fa-1x" aria-hidden="true"></i> Upload new work</a>
+                    <a class="nav-link text-white" id="v-pills-edit-tab" data-toggle="pill" href="#v-pills-edit" role="tab" aria-controls="v-pills-edit" aria-selected="false"><i class="fa fa-pencil fa-1x" aria-hidden="true"></i> Edit a work</a>
                     <a class="nav-link text-white" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false"><i class="fa fa-comments fa-1x" aria-hidden="true"></i> Messages</a>
                     <a class="nav-link text-white" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fa fa-cog fa-1x" aria-hidden="true"></i> Settings</a>
                 </div>
@@ -23,7 +24,7 @@
                     <p class="lead">Under construction!</p>
                         @endcomponent
                     </div>
-                    <div class="tab-pane fade bg-gradient-secondary" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                    <div class="tab-pane fade bg-gradient-secondary" id="v-pills-upload" role="tabpanel" aria-labelledby="v-pills-profile-tab">
                         @component('components.upload')
                         @endcomponent
                     </div>
@@ -33,6 +34,14 @@
                                 Messages panel
                             @endslot
                         <p class="lead">Under construction!</p>
+                        @endcomponent
+                    </div>
+                    <div class="tab-pane fade bg-gradient-secondary" id="v-pills-edit" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                        @component('components.edit')
+                            @slot('title')
+                                Edit panel
+                            @endslot
+                            <p class="lead">Under construction!</p>
                         @endcomponent
                     </div>
                     <div class="tab-pane fade bg-gradient-secondary" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">

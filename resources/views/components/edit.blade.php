@@ -1,0 +1,6 @@
+<div class="m-0 p-5">
+    @if (isset($title))
+    <h1 class="display-3">{{ $title }}</h1>
+    @endif
+    {{ $slot }}
+</div>
