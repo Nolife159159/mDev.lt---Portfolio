@@ -23,7 +23,6 @@ Route::get('/our-work', 'WorkController@index');
 Auth::routes();
 
 //work upload
-Route::get('/admin', 'AdminController@index');
-Route::post('/admin/upload-work', 'UploadController@store');
-
+Route::get('/admin', 'AdminController@index')->middleware('auth');
+Route::post('/admin/upload-work', 'UploadController@store')->middleware('auth');
 Route::redirect('/home', '/admin');
