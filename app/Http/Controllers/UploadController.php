@@ -17,14 +17,31 @@ class UploadController extends Controller
      */
     public function store(Request $request)
     {
-        foreach ($request->photos as $photo)
-        {
+
+        $this->validate($request, [
+            'photos' => 'required',
+            'photos.*' => 'required|image|max:20000',
+            'name' => 'required|max:255',
+            'desc' => 'required',
+            'langs' => 'required',
+        ]);
+
+
+        foreach ($request->photos as $photo) {
             $filename = $photo->store('public');
             $my_name [] = str_replace('public', 'storage', $filename);
         }
-        $imagesJson = json_encode($my_name);
-        Work::create(['name' => $request->name, 'description' => $request->desc, 'lang' => $request->langs, 'image_url' => $imagesJson, 'user_id' => Auth::user()->id]);
-        return back();
+
+        $work = new Work;
+        $work->name = $request->name;
+        $work->description = $request->desc;
+        $work->lang = $request->langs;
+        $work->image_url = json_encode($my_name);
+        $work->user_id = Auth::user()->id;
+        $work->save();
+
+        return back()
+            ->with('success', 'Work uploaded!');
     }
 
     /**

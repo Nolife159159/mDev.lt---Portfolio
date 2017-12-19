@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Admin;
+use App\Work;
+use App\User;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -14,7 +16,12 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin.index');
+        $allWorks = Work::all()->count();
+        $allUsers = User::all()->count();
+
+        return view('admin.index')->
+                withWorks($allWorks)->
+                withUsers($allUsers);
     }
 
     /**

@@ -4,7 +4,7 @@
 
 @section('content')
     <div class="bd-example-row">
-        <div class="m-0 row bg-gradient-secondary">
+        <div class="m-0 row bg-gradient-dark">
             <div class="col-sm-6">
                 <div class="card">
                     <h4 class="card-header bg-dark text-white">Katum

@@ -46850,7 +46850,7 @@ $('.bd-example-modal-sm').on('show.bs.modal', function (event) {
     modal.find('.modal-body #img-lang').text(objectData.lang);
     modal.find('.modal-body #img-by').text(objectData.username);
 
-    // clear carrousel
+    // clear carousel
     $(".carousel-inner").empty();
     $(".carousel-indicators").empty();
 
