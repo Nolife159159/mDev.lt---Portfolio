@@ -55,10 +55,10 @@
                             <li class="dropdown-header">Your menu</li>
 
                             <li>
-                                <a class="dropdown-item" href="admin">Admin panel</a>
+                                <a class="dropdown-item" href="{{ url('/admin') }}">Admin panel</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="#">Reload page</a>
+                                <a class="dropdown-item" href="{{ url()->current() }}">Reload page</a>
                             </li>
                             <li class="dropdown-divider"></li>
                             <li>

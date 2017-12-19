@@ -12,16 +12,16 @@
             @if (!count($works))
                 <h1 class="display-4">Sorry we cant find any jobs..</h1>
             @else
-                @foreach ($works AS $work)
+                @foreach ($works AS $work_info)
                     @php
-                        $array = json_decode($work->image_url, true);
-                        $randomImage = $array[rand(0, count($array) - 1)];
+                        $array = json_decode($work_info->image_url, true);
+                        $random_image = $array[rand(0, count($array) - 1)];
                     @endphp
-                    <img data-id="{{ $work->id }}" data-toggle="modal" data-target=".bd-example-modal-sm"
-                         src="{{ asset(str_replace('work/', '', $randomImage)) }} "
+                    <img data-id="{{ $work_info->id }}" data-toggle="modal" data-target=".bd-example-modal-sm"
+                         src="{{ asset($random_image) }} "
                          class="m-1 rounded d-block border border-secondary float-left work-block" alt="...">
                     @php
-                        $array = $randomImage = null;
+                        $array = $random_image = null;
                     @endphp
                 @endforeach
             @endif
@@ -73,6 +73,7 @@
 
 @section('scripts')
     <script type="text/javascript">
-       var workData = '@php echo $workModalList; @endphp';
+       var workData;
+       workData = '@php echo $workModalList; @endphp';
     </script>
 @endsection
