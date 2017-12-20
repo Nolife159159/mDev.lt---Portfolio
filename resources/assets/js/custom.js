@@ -29,10 +29,16 @@ $ ('.bd-example-modal-sm').on('show.bs.modal', function (event)
     $('#carouselExampleIndicators').carousel()
 });
 
-$('#v-pills-tab a').on('click', function (e)
+$ ('#v-pills-tab a').on('click', function (e)
 {
     e.preventDefault()
     $(this).tab('show')
     $('#v-pills-tab a').removeClass("active btn-danger")
     $(this).addClass("active btn-danger")
+});
+
+$.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
 });
