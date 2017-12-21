@@ -19,10 +19,18 @@ Route::view('/contact-us', 'pages.contact');
 // work
 Route::get('/our-work', 'WorkController@index');
 
+// remove - edit work
+Route::get('admin/work-delete/{id}', 'AdminController@deleteWork')->name('admin')->middleware('auth');
+
+Route::get('admin/work-edit/{id}', 'AdminController@show')->name('admin')->middleware('auth');
+Route::post('admin/work-edit/{id}', 'AdminController@store')->name('admin')->middleware('auth');
+
 // routed auth
 Auth::routes();
 
 //work upload
 Route::get('/admin', 'AdminController@index')->middleware('auth');
+
+// all about works
 Route::post('/admin/upload-work', 'UploadController@store')->middleware('auth');
 Route::redirect('/home', '/admin');

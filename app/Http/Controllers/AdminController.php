@@ -2,91 +2,61 @@
 
 namespace App\Http\Controllers;
 
-use App\Admin;
 use App\Work;
 use App\User;
+
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class AdminController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
-        $allWorks = Work::all()->count();
-        $allUsers = User::all()->count();
+        $allWorks = Work::all();
+        $allUsers = User::all();
 
         return view('admin.index')->
                 withWorks($allWorks)->
                 withUsers($allUsers);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function deleteWork($id = null)
     {
-        //
+        $workToDelete = Work::findOrFail($id);
+
+        $images = json_decode($workToDelete->image_url);
+        $images = str_replace('storage', 'public', $images);
+        Storage::delete($images);
+
+        $workToDelete->delete();
+        return back();
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function show($id)
     {
-        //
+        $work = Work::findOrFail($id);
+        $images = json_decode($work->image_url);
+        return view('admin.edit-work')->withWork($work)->withImages($images);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Admin  $admin
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Admin $admin)
+    public function store(Request $request, $id)
     {
-        //
-    }
+        $work = Work::findOrFail($id);
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Admin  $admin
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Admin $admin)
-    {
-        //
-    }
+        $this->validate($request, [
+            'name' => 'required|max:255',
+            'desc' => 'required',
+            'langs' => 'required',
+        ]);
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Admin  $admin
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Admin $admin)
-    {
-        //
-    }
+        $work->name = $request->name;
+        $work->description = $request->desc;
+        $work->lang = $request->langs;
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Admin  $admin
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Admin $admin)
-    {
-        //
+        $work->save();
+
+        return back()
+            ->with('success', 'Work updated!');
     }
 }

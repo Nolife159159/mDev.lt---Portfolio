@@ -28,8 +28,8 @@
         </div>
     </div>
 
-    <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
+    <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
@@ -39,29 +39,29 @@
                 </div>
                 <!-- body -->
                 <div class="modal-body">
-                    <b>Description:</b>
-                    <div id="img-description" class="d-inline font-weight-bolder"></div>
-                        <!-- Carousel -->
-                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                            <!-- Indicators -->
-                            <ol class="carousel-indicators"></ol>
-                            <!-- Wrapper for slides -->
-                            <div class="carousel-inner"></div>
-                            <!-- Controls -->
-                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </div>
-                    <b>Used languages:</b>
-                    <div id="img-lang" class="d-inline font-weight-bolder"></div>
-                    <br>
-                    <b>Coded by:</b>
-                    <div id="img-by" class="d-inline font-weight-bolder"></div>
+
+                    <div class="row">
+                        <div class="col-4"><b>Description: <span id="img-description"></span></b></div>
+                        <div class="col-4"><b>Used languages: <span id="img-lang"></span></b></div>
+                        <div class="col-4"><b>Coded by: <span id="img-by"></span></b></div>
+                    </div>
+
+                    <!-- Carousel -->
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators"></ol>
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner"></div>
+                        <!-- Controls -->
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>

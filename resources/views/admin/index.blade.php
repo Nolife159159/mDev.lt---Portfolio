@@ -50,13 +50,16 @@
                             @slot('title')
                                 Overview panel
                             @endslot
+
+                            @slot('work_list', $works)
+                            @slot('user_list', $users)
                         <br/>
                         <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#worksC" aria-expanded="false" aria-controls="worksC">
-                            Works uploaded <span class="badge badge-light">{{ $works }}</span>
+                            Works uploaded <span class="badge badge-light">{{ $works->count() }}</span>
                         </button>
 
                         <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#usersC" aria-expanded="false" aria-controls="usersC">
-                            Users registered <span class="badge badge-light">{{ $users }}</span>
+                            Users registered <span class="badge badge-light">{{ $users->count() }}</span>
                         </button>
                         @endcomponent
                     </div>
