@@ -1,4 +1,4 @@
-$ ('.bd-example-modal-sm').on('show.bs.modal', function (event)
+$ ('.bd-modal-sm').on('show.bs.modal', function (event)
 {
     var button = $(event.relatedTarget) // Button that triggered the modal
     var ImagesResourceId = button.data('id') // Extract info from data-* attributes
@@ -21,12 +21,12 @@ $ ('.bd-example-modal-sm').on('show.bs.modal', function (event)
     for (var i=0 ; i< images.length ; i++)
     {
         $('<div class="carousel-item"><img class="d-block w-100 h-100" src="'+images[i]+'" alt="..."/></div>').appendTo('.carousel-inner')
-        $('<li data-target="#carouselExampleIndicators" data-slide-to="'+i+'"></li>').appendTo('.carousel-indicators')
+        $('<li data-target="#carouselIndicators" data-slide-to="'+i+'"></li>').appendTo('.carousel-indicators')
     }
 
     $('.carousel-item').first().addClass('active')
     $('.carousel-indicators > li').first().addClass('active')
-    $('#carouselExampleIndicators').carousel()
+    $('#carouselIndicators').carousel()
 });
 
 $ ('#v-pills-tab a').on('click', function (e)
