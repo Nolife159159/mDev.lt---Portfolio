@@ -5,7 +5,7 @@
 @section('content')
     <div class="bd-example-row">
         <div class="jumbotron bg-gradient-dark rounded-0 pl-5">
-            <h1 class="display-3">Contacts page</h1>
+            <!-- <h1 class="display-3">Contacts page</h1> -->
             <section class="container">
                 <div class="row">
                     <div class="col-lg-5 mb-4">
@@ -28,14 +28,14 @@
                                     <label>Your email</label>
                                     <div class="input-group mb-2 mb-sm-0">
                                         <div class="input-group-addon bg-light"><i class="fa fa-envelope text-danger"></i></div>
-                                        <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="E-mail">
+                                        <input type="text" class="form-control" id="inlineFormInputGroupEmail" placeholder="E-mail">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label>Service</label>
                                     <div class="input-group mb-2 mb-sm-0">
                                         <div class="input-group-addon bg-light"><i class="fa fa-tag prefix text-danger"></i></div>
-                                        <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Service name">
+                                        <input type="text" class="form-control" id="inlineFormInputGroupService" placeholder="Service name">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -55,11 +55,11 @@
                         <div class="mb-4">
                         </div>
                         <div class="row text-center">
-                            <div class="col-md-4">
+                            <div class="col-md-4 text-white">
                                 <a class="bg-danger px-3 py-2 rounded text-white mb-2 d-inline-block"><i class="fa fa-skype"></i></a>
                                 <p>Nelixus: nelixus159<br>Katum: katumcwap</p>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-4 text-white">
                                 <a class="bg-danger px-3 py-2 rounded text-white mb-2 d-inline-block"><i class="fa fa-envelope"></i></a>
                                 <p>Nelixus: <br>Katum: </p>
                             </div>
