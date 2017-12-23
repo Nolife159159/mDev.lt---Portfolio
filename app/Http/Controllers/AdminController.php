@@ -27,6 +27,7 @@ class AdminController extends Controller
 
         $images = json_decode($workToDelete->image_url);
         $images = str_replace('storage', 'public', $images);
+
         Storage::delete($images);
 
         $workToDelete->delete();
@@ -58,5 +59,55 @@ class AdminController extends Controller
 
         return back()
             ->with('success', 'Work updated!');
+    }
+
+    public function deleteWorkImage($work_id = null, $img_id = null)
+    {
+        // find work if exists
+        $findWork = Work::findOrFail($work_id);
+
+        // decode json for readable data
+        $images = json_decode($findWork->image_url);
+        $images = str_replace('storage', 'public', $images);
+
+        $images_total = count($images);
+
+        $deleted = false;
+
+        // loop all images
+        foreach ($images AS $image_key => $image)
+        {
+            // find image
+            if ($image_key == $img_id)
+            {
+                // deleting image
+                Storage::delete($image);
+                // removing image from database array
+                unset($images[$image_key]);
+
+                $deleted = true;
+
+                break;
+            }
+        }
+
+        // cant delete image redirect back
+        if (!$deleted) return redirect('/admin/work-edit/'.$work_id)->with('success', 'Bad image key?');
+
+        if ($deleted && $images_total == 1) {
+            // delete work if last image deleted
+            $findWork->delete();
+            return redirect('/admin/')->with('success', 'All images deleted and work too!');
+        }
+        else {
+            // make json and update
+            $imagesSave = str_replace('public', 'storage', $images);
+            $imagesSave = json_encode($imagesSave);
+
+            $findWork->image_url = $imagesSave;
+
+            $findWork->update();
+        }
+        return redirect('/admin/work-edit/'.$work_id)->with('success', 'Image with id '.$img_id.' deteleted!');
     }
 }

@@ -22,8 +22,11 @@ Route::get('/our-work', 'WorkController@index');
 // remove - edit work
 Route::get('admin/work-delete/{id}', 'AdminController@deleteWork')->name('admin')->middleware('auth');
 
+// work show and edit [post]
 Route::get('admin/work-edit/{id}', 'AdminController@show')->name('admin')->middleware('auth');
 Route::post('admin/work-edit/{id}', 'AdminController@store')->name('admin')->middleware('auth');
+
+Route::get('admin/work-image-delete/{work_id}/{img_id}', 'AdminController@deleteWorkImage')->name('admin')->middleware('auth');
 
 // routed auth
 Auth::routes();

@@ -36,8 +36,13 @@
             <div class="col-12 bg-gradient-dark">
                 <form action="{{ action('AdminController@store', $work->id) }}" method="POST">
                     <div class="bd-example-row">
-                        <h1 class="text-white">Editing work <span class="text-danger">[{{ $work->id }}]</span></h1>
+                        <h3 class="text-white">Editing work <span class="text-danger">id, {{ $work->id }}</span></h3>
                         <span class="text-white">Created by: {{ $work->user->name }}, at {{ $work->created_at }}</span>
+
+                        <div class="col-sm-12 p-2">
+                            <button type="submit" class="btn btn-danger btn-lg btn-block">Save changes</button>
+                        </div>
+
                         <div class="m-0 row bg-gradient-secondary">
                             {{ csrf_field() }}
                             <div class="col-sm-6">
@@ -58,17 +63,13 @@
                             </div>
                             <div class="col-sm-6 bg-transparent border-0 pt-0 pb-0">
                                 <div class="row">
-                                    @foreach($images AS $image)
-                                        <div class="col-2 bg-transparent">
+                                    @foreach($images AS $image_key => $image)
+                                        <div class="col-sm-3 bg-transparent">
                                             <img src="/{{ $image }}" class="figure-img img-fluid rounded" alt="...">
-                                            <a href="button" class="btn btn-danger">Remove</a>
+                                            <a href="{{ url('/admin/work-image-delete/'.$work->id.'/'.$image_key) }}" class="btn btn-danger">Remove</a>
                                         </div>
                                     @endforeach
                                 </div>
-                            </div>
-
-                            <div class="col-sm-12 bg-dark">
-                                <button type="submit" class="btn btn-danger btn-lg btn-block">Save changes</button>
                             </div>
                         </div>
                     </div>
