@@ -94,7 +94,7 @@ class AdminController extends Controller
         // cant delete image redirect back
         if (!$deleted) return redirect('/admin/work-edit/'.$work_id)->with('success', 'Bad image key?');
 
-        if ($deleted && $images_total == 1) {
+        if ($images_total == 1) {
             // delete work if last image deleted
             $findWork->delete();
             return redirect('/admin/')->with('success', 'All images deleted and work too!');

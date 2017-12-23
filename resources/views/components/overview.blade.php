@@ -37,7 +37,7 @@
                                 #{{ $user_info->id }}, {{ $user_info->name }} <br/>
                                 <div class="btn-group" role="group">
                                     <a href="{{ url('/admin/user-edit/'.$user_info->id) }}" class="btn btn-outline-warning">Edit</a>
-                                    <a href="{{ url('/admin/work-delete/'.$user_info->id) }}" class="btn btn-outline-danger">Delete</a>
+                                    <a href="{{ url('/admin/user-delete/'.$user_info->id) }}" class="btn btn-outline-danger">Delete</a>
                                 </div>
                             </div>
                         @endforeach
