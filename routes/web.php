@@ -26,6 +26,9 @@ Route::get('admin/work-delete/{id}', 'AdminController@deleteWork')->name('admin'
 Route::get('admin/work-edit/{id}', 'AdminController@show')->name('admin')->middleware('auth');
 Route::post('admin/work-edit/{id}', 'AdminController@store')->name('admin')->middleware('auth');
 
+Route::get('admin/user-edit/{id}', 'AdminController@showUser')->name('admin')->middleware('auth');
+Route::post('admin/user-edit/{id}', 'AdminController@storeUser')->name('admin')->middleware('auth');
+
 Route::get('admin/work-image-delete/{work_id}/{img_id}', 'AdminController@deleteWorkImage')->name('admin')->middleware('auth');
 
 // routed auth

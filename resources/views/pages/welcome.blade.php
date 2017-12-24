@@ -13,5 +13,4 @@
             </p>
         </div>
     </div>
-    <div class="moving-clouds"></div>
 @endsection

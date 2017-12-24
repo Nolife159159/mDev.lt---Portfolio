@@ -61,6 +61,32 @@ class AdminController extends Controller
             ->with('success', 'Work updated!');
     }
 
+    // user edit
+
+    public function showUser($id)
+    {
+        $user = User::findOrFail($id);
+        return view('admin.edit-user')->withUser($user);
+    }
+
+    public function storeUser(Request $request, $id)
+    {
+        $user = User::findOrFail($id);
+
+        $this->validate($request, [
+            'name' => 'required|max:255',
+            'email' => 'required|max:255',
+        ]);
+
+        $user->name = $request->name;
+        $user->email = $request->email;
+
+        $user->save();
+
+        return back()
+            ->with('success', 'User updated!');
+    }
+
     public function deleteWorkImage($work_id = null, $img_id = null)
     {
         // find work if exists

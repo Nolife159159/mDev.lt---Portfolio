@@ -22,62 +22,58 @@
 
         <div id="navbarSupportedContent" class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item m-2 {{ Request::is('/') ? 'active' : '' }}">
+                <li class="nav-item m-2 p-2 {{ Request::is('/') ? 'active' : '' }}">
                     <a class="nav-link" href="{{ url('/') }}"><i class="fa fa-home fa-1x text-danger" aria-hidden="true"></i> <span class="text-uppercase border border-danger border-right-0 border-top-0 border-left-0">Homepage</span></a>
                 </li>
-                <li class="nav-item m-2 {{ Request::is('about-us') ? 'active' : '' }}">
-                    <a class="nav-link" href="{{ url('/about-us') }}"><i class="fa fa-user fa-1x text-danger" aria-hidden="true"></i> <span class="text-uppercase border border-danger border-right-0 border-top-0 border-left-0">About US</span></a>
+                <li class="nav-item m-2 p-2 {{ Request::is('about-us') ? 'active' : '' }}">
+                    <a class="nav-link" href="{{ url('/about-us') }}"><i class="fa fa-user fa-1x text-danger" aria-hidden="true"></i> <span class="text-uppercase border border-danger border-right-0 border-top-0 border-left-0 pl-1">About US</span></a>
                 </li>
-                <li class="nav-item m-2 {{ Request::is('our-work') ? 'active' : '' }}">
+                <li class="nav-item m-2 p-2 {{ Request::is('our-skills') ? 'active' : '' }}">
+                    <a class="nav-link" href="{{ url('/our-skills') }}"><i class="fa fa-superpowers fa-1x text-danger" aria-hidden="true"></i> <span class="text-uppercase border border-danger border-right-0 border-top-0 border-left-0">Our Skills</span></a>
+                </li>
+                <li class="nav-item m-2 p-2 {{ Request::is('our-work') ? 'active' : '' }}">
                     <a class="nav-link" href="{{ url('/our-work') }}"><i class="fa fa-eye fa-1x text-danger" aria-hidden="true"></i> <span class="text-uppercase border border-danger border-right-0 border-top-0 border-left-0">Our Work</span></a>
                 </li>
-                <li class="nav-item m-2 {{ Request::is('contact-us') ? 'active' : '' }}">
+                <li class="nav-item m-2 p-2 {{ Request::is('contact-us') ? 'active' : '' }}">
                     <a class="nav-link" href="{{ url('/contact-us') }}"><i class="fa fa-envelope fa-1x text-danger" aria-hidden="true"></i> <span class="text-uppercase border border-danger border-right-0 border-top-0 border-left-0">Contact Us</span></a>
                 </li>
             </ul>
+
             <ul class="navbar-nav">
                 <!-- Authentication Links -->
                 @guest
-                    <li class="btn-group">
-                        <a class="btn btn-danger" href="{{ route('login') }}">Login</a>
-                        <a class="btn btn-danger" href="{{ route('register') }}">Register</a>
+                    <li class="nav-item">
+                        <div class="btn-group">
+                            <a class="btn btn-danger" href="{{ route('login') }}">Login</a>
+                            <a class="btn btn-danger" href="{{ route('register') }}">Register</a>
+                        </div>
                     </li>
                 @else
-
-                    <li class="btn-group">
-                        <button class="btn btn-danger" type="button">
+                    <li class="nav-item m-2 dropdown">
+                        <a class="nav-link dropdown-toggle dropdown-toggle-split" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             {{ Auth::user()->name }}
-                        </button>
-                        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="sr-only">Toggle Dropdown</span>
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-right">
-                            <li class="dropdown-header">Your menu</li>
-
-                            <li>
-                                <a class="dropdown-item" href="{{ url('/admin') }}">Admin panel</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="{{ url()->current() }}">Reload page</a>
-                            </li>
-                            <li class="dropdown-divider"></li>
-                            <li>
-                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                   onclick="event.preventDefault();
-                                       document.getElementById('logout-form').submit();">
-                                    Logout
-                                </a>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                    {{ csrf_field() }}
-                                </form>
-                            </li>
-                        </ul>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ url('/admin') }}">Admin panel</a>
+                            <a class="dropdown-item" href="{{ url()->current() }}">Reload page</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{ route('logout') }}"
+                               onclick="event.preventDefault();
+                                           document.getElementById('logout-form').submit();">
+                                Logout
+                            </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                {{ csrf_field() }}
+                            </form>
+                        </div>
                     </li>
                  @endguest
             </ul>
         </div>
     </nav>
     @yield('content')
+
+    <div class="moving-clouds"></div>
 </div>
 
 @yield('scripts')
