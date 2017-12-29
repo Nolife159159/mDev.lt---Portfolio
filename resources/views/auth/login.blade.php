@@ -2,8 +2,8 @@
 
 @section('content')
     <div class="container">
-        <div class="card">
-            <div class="card-header">Login</div>
+        <div class="card bg-secondary">
+            <div class="card-header text-white">Login</div>
             <div class="card-block">
                 <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                     {{ csrf_field() }}
@@ -12,7 +12,7 @@
                         <label for="email" class="col-md-4 control-label">E-Mail Address</label>
 
                         <div class="col-md-6">
-                            <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
+                            <input id="email" type="email" class="form-control bg-danger border border-danger text-white" name="email" value="{{ old('email') }}" required autofocus>
 
                             @if ($errors->has('email'))
                                 <span class="help-block">
@@ -26,7 +26,7 @@
                         <label for="password" class="col-md-4 control-label">Password</label>
 
                         <div class="col-md-6">
-                            <input id="password" type="password" class="form-control" name="password" required>
+                            <input id="password" type="password" class="form-control bg-danger border border-danger text-white" name="password" required>
 
                             @if ($errors->has('password'))
                                 <span class="help-block">
@@ -52,7 +52,7 @@
                                 Login
                             </button>
 
-                            <a class="btn btn-link" href="{{ route('password.request') }}">
+                            <a class="btn btn-link text-danger" href="{{ route('password.request') }}">
                                 Forgot Your Password?
                             </a>
                         </div>

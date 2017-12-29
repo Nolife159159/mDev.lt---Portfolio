@@ -2,8 +2,8 @@
 
 @section('content')
     <div class="container">
-        <div class="card">
-            <div class="card-header">Reset Password</div>
+        <div class="card  bg-secondary">
+            <div class="card-header text-white">Reset Password</div>
             <div class="card-block">
                 <form class="form-horizontal" method="POST" action="{{ route('password.request') }}">
                     {{ csrf_field() }}
@@ -14,7 +14,7 @@
                         <label for="email" class="col-md-4 control-label">E-Mail Address</label>
 
                         <div class="col-md-6">
-                            <input id="email" type="email" class="form-control" name="email" value="{{ $email or old('email') }}" required autofocus>
+                            <input id="email" type="email" class="form-control bg-danger border border-danger text-white" name="email" value="{{ $email or old('email') }}" required autofocus>
 
                             @if ($errors->has('email'))
                                 <span class="help-block">

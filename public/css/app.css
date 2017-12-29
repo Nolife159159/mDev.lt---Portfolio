@@ -41,9 +41,15 @@ html {
 }
 
 .work-block:hover {
-  border: blue 1px dashed !important;
-  -webkit-transform: translate(0, -5px);
-          transform: translate(0, -5px);
+  border-radius: 100px !important;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  color: #fff;
+  text-decoration: none;
+  background: #c82333 -webkit-gradient(linear, left top, left bottom, from(#d04451), to(#c82333)) repeat-x !important;
+  background: #c82333 linear-gradient(180deg, #d04451, #c82333) repeat-x !important;
 }
 
 /*!

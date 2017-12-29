@@ -2,8 +2,8 @@
 
 @section('content')
     <div class="container">
-        <div class="card">
-            <div class="card-header">Reset Password</div>
+        <div class="card bg-secondary">
+            <div class="card-header text-white">Reset Password</div>
             <div class="card-block">
                 @if (session('status'))
                     <div class="alert alert-success">
@@ -18,7 +18,7 @@
                         <label for="email" class="col-md-4 control-label">E-Mail Address</label>
 
                         <div class="col-md-6">
-                            <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
+                            <input id="email" type="email" class="form-control bg-danger border border-danger text-white" name="email" value="{{ old('email') }}" required>
 
                             @if ($errors->has('email'))
                                 <span class="help-block">

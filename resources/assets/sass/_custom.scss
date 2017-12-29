@@ -40,7 +40,14 @@ html {
   width: 200px;
   transition: all .3s ease-out;
   &:hover {
-    border: blue 1px dashed!important;
-    transform: translate(0, -5px);
+    border-radius: 100px !important;
+  }
+}
+.dropdown-item {
+  &.active, &:active {
+    color: #fff;
+    text-decoration: none;
+    background: #c82333 -webkit-gradient(linear, left top, left bottom, from(#d04451), to(#c82333)) repeat-x !important;
+    background: #c82333 linear-gradient(180deg, #d04451, #c82333) repeat-x !important;
   }
 }
