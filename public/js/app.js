@@ -16701,7 +16701,7 @@ $('.bd-modal-sm').on('show.bs.modal', function (event) {
 
     // carousel
     for (var i = 0; i < images.length; i++) {
-        $('<div class="carousel-item"><img class="d-block w-100 h-100" src="' + images[i] + '" alt="..."/></div>').appendTo('.carousel-inner');
+        $('<div class="carousel-item"><img class="d-block w-100" src="' + images[i] + '" alt="..."/></div>').appendTo('.carousel-inner');
         $('<li data-target="#carouselIndicators" data-slide-to="' + i + '"></li>').appendTo('.carousel-indicators');
     }
 

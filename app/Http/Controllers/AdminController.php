@@ -55,6 +55,21 @@ class AdminController extends Controller
         $work->description = $request->desc;
         $work->lang = $request->langs;
 
+        // add new photos
+        if ($request->photos != null)
+        {
+            // to array
+            $workImagesArray = json_decode($work->image_url);
+
+            foreach ($request->photos as $photo)
+            {
+                $filename = $photo->store('public');
+                $workImagesArray [] = str_replace('public', 'storage', $filename);
+            }
+
+            $work->image_url = json_encode($workImagesArray);
+        }
+
         $work->save();
 
         return back()

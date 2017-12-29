@@ -3,7 +3,7 @@
 @section('title', ' - mDev works!')
 
 @section('content')
-    <div class="bd-example-row">
+
         <div class="p-5 m-0 bg-gradient-dark">
             <h1 class="display-4">Hello, again!</h1>
             <p class="lead">Here your find our gallery and portfolio.</p>
@@ -26,7 +26,6 @@
                 @endforeach
             @endif
         </div>
-    </div>
 
     <div class="modal fade bd-modal-sm" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
@@ -39,7 +38,6 @@
                 </div>
                 <!-- body -->
                 <div class="modal-body">
-
                     <div class="row">
                         <div class="col-4"><b>Description: <span id="img-description"></span></b></div>
                         <div class="col-4"><b>Used languages: <span id="img-lang"></span></b></div>
@@ -73,7 +71,6 @@
 
 @section('scripts')
     <script type="text/javascript">
-       var workData;
-       workData = '@php echo $workModalList; @endphp';
+       var workData = @json($workModalList);
     </script>
 @endsection
