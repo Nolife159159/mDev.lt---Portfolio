@@ -103,13 +103,126 @@
                 <div class="information" style="display: none;"></div>
             </div>
             <div class="wrap-message">
-                <i class="fa fa-smile-o fa-lg icon" aria-hidden="true"></i>
+                <span class="icon" data-toggle="popover" data-placement="top" title="Smiles" ><i class="fa fa-smile-o fa-lg icon" aria-hidden="true"></i></span>
                 <div class="message">
                     <input type="text" class="input-message" placeholder="Write a message">
                 </div>
                 <i class="fa fa-microphone fa-lg icon" aria-hidden="true"></i>
             </div>
-
         </section>
+        <div id="popoverContent" style="display: none">
+            <div>
+                <table style="width:100%">
+                    <tr>
+                        <td width="25%">
+                            <a title="smile.png" onclick="" href="#">
+                                <img alt="smile.png" src="images/smiles/smile.png">
+                            </a>
+                        </td>
+                        <td width="25%">
+                            <a title="wink.png" onclick="" href="#">
+                                <img alt="wink.png" src="images/smiles/wink.png">
+                            </a>
+                        </td>
+                        <td width="25%">
+                            <a title="tongue.png" onclick="" href="#">
+                                <img alt="tongue.png" src="images/smiles/tongue.png">
+                            </a>
+                        </td>
+                        <td width="25%">
+                            <a title="biggrin.png" onclick="" href="#">
+                                <img alt="biggrin.png" src="images/smiles/biggrin.png">
+                            </a>
+                        </td>
+                        <td width="25%">
+                            <a title="laugh.png" onclick="" href="#">
+                                <img alt="laugh.png" src="images/smiles/laugh.png">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="25%">
+                            <a title="sad.png" onclick="" href="#">
+                                <img alt="sad.png" src="images/smiles/sad.png">
+                            </a>
+                        </td>
+                        <td width="25%">
+                            <a title="angry.png" onclick="" href="#">
+                                <img alt="angry.png" src="images/smiles/angry.png">
+                            </a>
+                        </td>
+                        <td width="25%">
+                            <a title="mellow.png" onclick="" href="#">
+                                <img alt="mellow.png" src="images/smiles/mellow.png">
+                            </a>
+                        </td>
+                        <td width="25%">
+                            <a title="huh.png" onclick="" href="#">
+                                <img alt="huh.png" src="images/smiles/huh.png">
+                            </a>
+                        </td>
+                        <td width="25%">
+                            <a title="happy.png" onclick="" href="#">
+                                <img alt="happy.png" src="images/smiles/happy.png">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="25%">
+                            <a title="ohmy.png" onclick="" href="#">
+                                <img alt="ohmy.png" src="images/smiles/ohmy.png">
+                            </a>
+                        </td>
+                        <td width="25%">
+                            <a title="cool.png" onclick="" href="#">
+                                <img alt="cool.png" src="images/smiles/cool.png">
+                            </a>
+                        </td>
+                        <td width="25%">
+                            <a title="rolleyes.gif" onclick="" href="#">
+                                <img alt="rolleyes.gif" src="images/smiles/rolleyes.gif">
+                            </a>
+                        </td>
+                        <td width="25%">
+                            <a title="sleep.png" onclick="" href="#">
+                                <img alt="sleep.png" src="images/smiles/sleep.png">
+                            </a>
+                        </td>
+                        <td width="25%">
+                            <a title="dry.png" onclick="" href="#">
+                                <img alt="dry.png" src="images/smiles/dry.png">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="25%">
+                            <a title="wub.png" onclick="" href="#">
+                                <img alt="wub.png" src="images/smiles/wub.png">
+                            </a>
+                        </td>
+                        <td width="25%">
+                            <a title="unsure.png" onclick="" href="#">
+                                <img alt="unsure.png" src="images/smiles/unsure.png">
+                            </a>
+                        </td>
+                        <td width="25%">
+                            <a title="wacko.png" onclick="" href="#">
+                                <img alt="wacko.png" src="images/smiles/wacko.png">
+                            </a>
+                        </td>
+                        <td width="25%">
+                            <a title="blink.png" onclick="" href="#">
+                                <img alt="blink.png" src="images/smiles/blink.png">
+                            </a>
+                        </td>
+                        <td width="25%">
+                            <a title="bandit.png" onclick="" href="#">
+                                <img alt="bandit.png" src="images/smiles/bandit.png">
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
     </div>
 @endsection

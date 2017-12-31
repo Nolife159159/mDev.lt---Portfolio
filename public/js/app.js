@@ -16723,6 +16723,15 @@ $.ajaxSetup({
     }
 });
 
+$(document).ready(function () {
+    $('[data-toggle="popover"]').popover({
+        html: true,
+        content: function content() {
+            return $('#popoverContent').html();
+        }
+    });
+});
+
 /***/ }),
 /* 8 */
 /***/ (function(module, exports) {
