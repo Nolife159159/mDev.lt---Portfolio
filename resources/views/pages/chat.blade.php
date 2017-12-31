@@ -30,6 +30,7 @@
                     <p>17:54</p>
                 </div>
             </div>
+            </div>
         </section>
         <section class="right">
             <div class="chat-head">
