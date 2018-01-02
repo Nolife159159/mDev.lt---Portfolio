@@ -42,12 +42,3 @@ $.ajaxSetup({
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
     }
 });
-
-$(document).ready(function(){
-    $('[data-toggle="popover"]').popover({
-        html : true,
-        content: function() {
-            return $('#popoverContent').html();
-        }
-    });
-});

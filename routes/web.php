@@ -15,7 +15,6 @@
 Route::view('/', 'pages.welcome');
 Route::view('/about-us', 'pages.about');
 Route::view('/contact-us', 'pages.contact');
-Route::view('/chat', 'pages.chat');
 
 // work
 Route::get('/our-work', 'WorkController@index');

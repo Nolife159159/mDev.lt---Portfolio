@@ -4,17 +4,13 @@
     @endif
 
     <button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#inbox" aria-controls="inbox">
-        Inbox <span class="badge badge-light">0</span>
-    </button>
-
-    <button type="button" class="btn btn-danger">
-        Sent Messages <span class="badge badge-light">0</span>
+        Orders <span class="badge badge-light">0</span>
     </button>
 
     <div class="collapse show" id="inbox">
         <div class="card text-white bg-secondary border border-danger mb-3 mt-3">
             <div class="card-header border border-danger">
-                Inbox
+                Orders
             </div>
             <div class="card-body bg-dark">
                 <div class="container">

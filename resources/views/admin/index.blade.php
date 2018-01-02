@@ -37,7 +37,7 @@
                         <div class="nav flex-md-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                             <a class="nav-link active btn-danger text-white d-block" id="home-tab" data-toggle="pill" href="#v-home" role="tab" aria-controls="v-pills-home" aria-selected="true"><i class="fa fa-dashcube fa-1x" aria-hidden="true"></i> Overview</a>
                             <a class="nav-link text-white d-block" id="upload-tab" data-toggle="pill" href="#v-upload" role="tab" aria-controls="v-pills-upload" aria-selected="false"><i class="fa fa-upload fa-1x" aria-hidden="true"></i> Upload new work</a>
-                            <a class="nav-link text-white d-block" id="messages-tab" data-toggle="pill" href="#v-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false"><i class="fa fa-comments fa-1x" aria-hidden="true"></i> Messages</a>
+                            <a class="nav-link text-white d-block" id="messages-tab" data-toggle="pill" href="#v-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false"><i class="fa fa-comments fa-1x" aria-hidden="true"></i> Orders</a>
                             <a class="nav-link text-white d-block" id="settings-tab" data-toggle="pill" href="#v-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fa fa-cog fa-1x" aria-hidden="true"></i> Settings</a>
                         </div>
                     </div>
@@ -57,8 +57,8 @@
                                 @endcomponent
                             </div>
                             <div class="tab-pane fade bg-gradient-secondary" id="v-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-                                @component('components.messages')
-                                    @slot('title', 'Messages panel')
+                                @component('components.orders')
+                                    @slot('title', 'Orders panel')
                                 @endcomponent
                             </div>
                             <div class="tab-pane fade bg-gradient-secondary" id="v-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
