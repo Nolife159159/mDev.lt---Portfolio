@@ -42,7 +42,7 @@
                         </div>
                     </div>
 
-                    <div class="col-sm-auto col-sm-9">
+                    <div class="col-sm-auto col-sm-10">
                         <div class="tab-content" id="v-pills-tabContent">
                             <div class="tab-pane fade show active bg-gradient-secondary m-0 p-0" id="v-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
                                 @component('components.overview')
@@ -59,6 +59,7 @@
                             <div class="tab-pane fade bg-gradient-secondary" id="v-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
                                 @component('components.orders')
                                     @slot('title', 'Orders panel')
+                                    @slot('contacts', $contacts)
                                 @endcomponent
                             </div>
                             <div class="tab-pane fade bg-gradient-secondary" id="v-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">

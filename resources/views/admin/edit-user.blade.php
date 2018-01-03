@@ -4,35 +4,7 @@
 
 @section('content')
     <div class="bg-dark">
-        <div class="row m-0">
-            @if ($errors->any())
-                <div class="col-12 bg-gradient-danger">
-                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                        <ul>
-                            @foreach ($errors->all() AS $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                </div>
-            @endif
-
-            @if ($message = Session::get('success'))
-                <div class="col-12 bg-gradient-success">
-                    <div class="alert alert-success alert-dismissible fade show" role="alert">
-                        <ul>
-                            <li>{{ $message }}</li>
-                        </ul>
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                </div>
-            @endif
-        </div>
+        @section('inputs')
         <form action="{{ action('AdminController@storeUser', $user->id) }}" method="POST">
             {{ csrf_field() }}
             <div class="row m-0 p-3">

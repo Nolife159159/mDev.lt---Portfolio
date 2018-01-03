@@ -16,6 +16,9 @@ Route::view('/', 'pages.welcome');
 Route::view('/about-us', 'pages.about');
 Route::view('/contact-us', 'pages.contact');
 
+// contact
+Route::post('/contact-us', 'ContactController@store');
+
 // work
 Route::get('/our-work', 'WorkController@index');
 
@@ -34,7 +37,7 @@ Route::get('admin/work-image-delete/{work_id}/{img_id}', 'AdminController@delete
 // routed auth
 Auth::routes();
 
-//work upload
+// admin page
 Route::get('/admin', 'AdminController@index')->middleware('auth');
 
 // all about works

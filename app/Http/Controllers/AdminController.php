@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Work;
 use App\User;
+use App\Contact;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -15,10 +16,12 @@ class AdminController extends Controller
     {
         $allWorks = Work::all();
         $allUsers = User::all();
+        $allContacts = Contact::all();
 
-        return view('admin.index')->
-                withWorks($allWorks)->
-                withUsers($allUsers);
+        return view('admin.index')
+                    ->withWorks($allWorks)
+                    ->withUsers($allUsers)
+                    ->withContacts($allContacts);
     }
 
     public function deleteWork($id = null)
