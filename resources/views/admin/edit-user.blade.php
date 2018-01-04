@@ -4,9 +4,9 @@
 
 @section('content')
     <div class="bg-dark">
-        @section('inputs')
         <form action="{{ action('AdminController@storeUser', $user->id) }}" method="POST">
             {{ csrf_field() }}
+            @component('components.inputs')
             <div class="row m-0 p-3">
                 <div class="col-12 bg-gradient-dark">
                     <h3 class="text-white">Editing {{ $user->email }} <span class="text-danger">id, {{ $user->id }}</span></h3>
