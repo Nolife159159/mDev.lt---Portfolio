@@ -11,68 +11,82 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-<div id="app" class="container-fluid">
-    <nav class="navbar navbar-toggleable-sm navbar-expand-lg mt-1 navbar-dark bg-dark">
-        <a class="navbar-brand display-inline font-weight-bolder m-2" href="{{ url('/') }}">
-            {{ config('app.name') }}
+<div id="app">
+    <div class="Padding">
+    <nav class="mainNavbar">
+        <a class="Icon" href="{{ url('/') }}">
+            <span class="spanMain IconSize">mDev</span>
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div id="navbarSupportedContent" class="collapse navbar-collapse">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item m-2 p-2 {{ Request::is('/') ? 'active' : '' }}">
-                    <a class="nav-link" href="{{ url('/') }}"><i class="fa fa-home fa-1x text-danger" aria-hidden="true"></i> <span class="text-uppercase border border-danger border-right-0 border-top-0 border-left-0">Homepage</span></a>
+        <div class="navBarItems">
+            <ul class="nav ListHelper position ListHelper2">
+                <li class="navBarItemList">
+                    <a class="tooltipai" href="{{ url('/') }}" title="" data-toggle="tooltip" data-placement="right" data-container="body" data-original-title="Homepage">
+                        <span class="spanMain HomeIcon"></span>
+                        <small class="TextMain TextHelper">Homepage</small>
+                    </a>
                 </li>
-                <li class="nav-item m-2 p-2 {{ Request::is('about-us') ? 'active' : '' }}">
-                    <a class="nav-link" href="{{ url('/about-us') }}"><i class="fa fa-user fa-1x text-danger" aria-hidden="true"></i> <span class="text-uppercase border border-danger border-right-0 border-top-0 border-left-0 pl-1">About US</span></a>
+                <li class="navBarItemList">
+                    <a class="tooltipai" href="{{ url('/about-us') }}" title="" data-toggle="tooltip" data-placement="right" data-container="body" data-original-title="About US">
+                        <span class="spanMain AboutUsIcon"></span>
+                        <small class="TextMain TextHelper">About US</small>
+                    </a>
                 </li>
-                <li class="nav-item m-2 p-2 {{ Request::is('our-skills') ? 'active' : '' }}">
-                    <a class="nav-link" href="{{ url('/our-skills') }}"><i class="fa fa-superpowers fa-1x text-danger" aria-hidden="true"></i> <span class="text-uppercase border border-danger border-right-0 border-top-0 border-left-0">Our Skills</span></a>
+                <li class="navBarItemList">
+                    <a class="tooltipai" href="{{ url('/our-skills') }}" title="" data-toggle="tooltip" data-placement="right" data-container="body" data-original-title="Our Skills">
+                        <span class="spanMain OurSkilIcon"></span>
+                        <small class="TextMain TextHelper">Our Skills</small>
+                    </a>
                 </li>
-                <li class="nav-item m-2 p-2 {{ Request::is('our-work') ? 'active' : '' }}">
-                    <a class="nav-link" href="{{ url('/our-work') }}"><i class="fa fa-eye fa-1x text-danger" aria-hidden="true"></i> <span class="text-uppercase border border-danger border-right-0 border-top-0 border-left-0">Our Work</span></a>
+                <li class="navBarItemList">
+                    <a class="tooltipai active" href="{{ url('/our-work') }}" title="" data-toggle="tooltip" data-placement="right" data-container="body" data-original-title="Our Work">
+                        <span class="spanMain OurWorkIcon"></span>
+                        <small class="TextMain TextHelper">Our Work</small>
+                    </a>
                 </li>
-                <li class="nav-item m-2 p-2 {{ Request::is('contact-us') ? 'active' : '' }}">
-                    <a class="nav-link" href="{{ url('/contact-us') }}"><i class="fa fa-envelope fa-1x text-danger" aria-hidden="true"></i> <span class="text-uppercase border border-danger border-right-0 border-top-0 border-left-0">Contact Us</span></a>
+                <li class="navBarItemList">
+                    <a class="tooltipai" href="{{ url('/contact-us') }}" title="" data-toggle="tooltip" data-placement="right" data-container="body" data-original-title="Contact Us">
+                        <span class="spanMain ContactUsIcon"></span>
+                        <small class="TextMain TextHelper">Contact Us</small>
+                    </a>
                 </li>
-            </ul>
-
-            <ul class="navbar-nav">
-                <!-- Authentication Links -->
-                @guest
-                    <li class="nav-item">
-                        <div class="btn-group">
-                            <a class="btn btn-danger" href="{{ route('login') }}">Login</a>
-                            <a class="btn btn-danger" href="{{ route('register') }}">Register</a>
-                        </div>
-                    </li>
-                @else
-                    <li class="nav-item m-2 dropdown">
-                        <a class="nav-link dropdown-toggle dropdown-toggle-split" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            {{ Auth::user()->name }}
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ url('/admin') }}">Admin panel</a>
-                            <a class="dropdown-item" href="{{ url()->current() }}">Reload page</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{{ route('logout') }}"
-                               onclick="event.preventDefault();
-                                           document.getElementById('logout-form').submit();">
-                                Logout
-                            </a>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                {{ csrf_field() }}
-                            </form>
-                        </div>
-                    </li>
-                 @endguest
             </ul>
         </div>
+        <!--
+        <ul class="navbar-nav">
+            <!-- Authentication Links -->
+    <!--
+            @guest
+                <li class="nav-item">
+                    <div class="btn-group">
+                        <a class="btn btn-danger" href="{{ route('login') }}">Login</a>
+                        <a class="btn btn-danger" href="{{ route('register') }}">Register</a>
+                    </div>
+                </li>
+            @else
+                <li class="nav-item m-2 dropdown">
+                    <a class="nav-link dropdown-toggle dropdown-toggle-split" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{ Auth::user()->name }}
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ url('/admin') }}">Admin panel</a>
+                        <a class="dropdown-item" href="{{ url()->current() }}">Reload page</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                           onclick="event.preventDefault();
+                                           document.getElementById('logout-form').submit();">
+                            Logout
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            {{ csrf_field() }}
+                        </form>
+                    </div>
+                </li>
+            @endguest
+        </ul>
+        -->
     </nav>
     @yield('content')
-
+    </div>
     <div class="moving-clouds"></div>
 </div>
 

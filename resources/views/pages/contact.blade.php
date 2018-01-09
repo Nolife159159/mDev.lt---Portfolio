@@ -32,7 +32,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <div class="input-group mb-2 mb-sm-0">s
+                                <div class="input-group mb-2 mb-sm-0">
                                     <textarea class="text-line"  name="comment" placeholder="Your comment"></textarea>
                                 </div>
                             </div>

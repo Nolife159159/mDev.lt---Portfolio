@@ -3,7 +3,7 @@
 @section('title', ' - mDev works!')
 
 @section('content')
-    <div class="bw">
+    <div class="MainContent">
         <div class="p-5 m-0 bg-gradient-dark">
             <h1 class="display-4">Hello, again!</h1>
             <p class="lead">Here your find our gallery and portfolio.</p>
