@@ -3,7 +3,7 @@
 @section('title', ' - mDev works!')
 
 @section('content')
-
+    <div class="bw">
         <div class="p-5 m-0 bg-gradient-dark">
             <h1 class="display-4">Hello, again!</h1>
             <p class="lead">Here your find our gallery and portfolio.</p>
@@ -27,42 +27,43 @@
             @endif
         </div>
 
-    <div class="modal fade bd-modal-sm" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="ModalLabel">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <!-- body -->
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-4"><b>Description: <span id="img-description"></span></b></div>
-                        <div class="col-4"><b>Used languages: <span id="img-lang"></span></b></div>
-                        <div class="col-4"><b>Coded by: <span id="img-by"></span></b></div>
+        <div class="modal fade bd-modal-sm" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="ModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
+                    <!-- body -->
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-4"><b>Description: <span id="img-description"></span></b></div>
+                            <div class="col-4"><b>Used languages: <span id="img-lang"></span></b></div>
+                            <div class="col-4"><b>Coded by: <span id="img-by"></span></b></div>
+                        </div>
 
-                    <!-- Carousel -->
-                    <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
-                        <!-- Indicators -->
-                        <ol class="carousel-indicators"></ol>
-                        <!-- Wrapper for slides -->
-                        <div class="carousel-inner"></div>
-                        <!-- Controls -->
-                        <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
+                        <!-- Carousel -->
+                        <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators"></ol>
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner"></div>
+                            <!-- Controls -->
+                            <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -71,6 +72,6 @@
 
 @section('scripts')
     <script type="text/javascript">
-       var workData = @json($workModalList);
+        var workData = @json($workModalList);
     </script>
 @endsection
