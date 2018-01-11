@@ -14,37 +14,40 @@
 <div id="app">
     <div class="Padding">
     <nav class="mainNavbar">
-        <a class="Icon" href="{{ url('/') }}">
-            <span class="spanMain IconSize">mDev</span>
-        </a>
         <div class="navBarItems">
+            <div class="paddingNormal"></div>
             <ul class="nav ListHelper position ListHelper2">
-                <li class="navBarItemList">
-                    <a class="tooltipai" href="{{ url('/') }}" title="" data-toggle="tooltip" data-placement="right" data-container="body" data-original-title="Homepage">
-                        <span class="spanMain HomeIcon"></span>
-                        <small class="TextMain TextHelper">Homepage</small>
+                <li class="navBarItemList logo">
+                    <a class="tooltipai" href="{{ url('/') }}">
+                        <small>mDev</small>
                     </a>
                 </li>
                 <li class="navBarItemList">
-                    <a class="tooltipai" href="{{ url('/about-us') }}" title="" data-toggle="tooltip" data-placement="right" data-container="body" data-original-title="About US">
+                    <a class="tooltipai {{ Request::is('/') ? 'activeMenu' : '' }}" href="{{ url('/') }}" title="" data-toggle="tooltip" data-placement="right" data-container="body" data-original-title="Homepage">
+                        <span class="spanMain HomeIcon"></span>
+                        <small class="TextMain TextHelper">Home page</small>
+                    </a>
+                </li>
+                <li class="navBarItemList">
+                    <a class="tooltipai {{ Request::is('about-us') ? 'activeMenu' : '' }}" href="{{ url('/about-us') }}" title="" data-toggle="tooltip" data-placement="right" data-container="body" data-original-title="About US">
                         <span class="spanMain AboutUsIcon"></span>
                         <small class="TextMain TextHelper">About US</small>
                     </a>
                 </li>
                 <li class="navBarItemList">
-                    <a class="tooltipai" href="{{ url('/our-skills') }}" title="" data-toggle="tooltip" data-placement="right" data-container="body" data-original-title="Our Skills">
+                    <a class="tooltipai {{ Request::is('our-skills') ? 'activeMenu' : '' }}" href="{{ url('/our-skills') }}" title="" data-toggle="tooltip" data-placement="right" data-container="body" data-original-title="Our Skills">
                         <span class="spanMain OurSkilIcon"></span>
                         <small class="TextMain TextHelper">Our Skills</small>
                     </a>
                 </li>
                 <li class="navBarItemList">
-                    <a class="tooltipai active" href="{{ url('/our-work') }}" title="" data-toggle="tooltip" data-placement="right" data-container="body" data-original-title="Our Work">
+                    <a class="tooltipai  {{ Request::is('our-work') ? 'activeMenu' : '' }}" href="{{ url('/our-work') }}" title="" data-toggle="tooltip" data-placement="right" data-container="body" data-original-title="Our Work">
                         <span class="spanMain OurWorkIcon"></span>
                         <small class="TextMain TextHelper">Our Work</small>
                     </a>
                 </li>
                 <li class="navBarItemList">
-                    <a class="tooltipai" href="{{ url('/contact-us') }}" title="" data-toggle="tooltip" data-placement="right" data-container="body" data-original-title="Contact Us">
+                    <a class="tooltipai {{ Request::is('contact-us') ? 'activeMenu' : '' }}" href="{{ url('/contact-us') }}" title="" data-toggle="tooltip" data-placement="right" data-container="body" data-original-title="Contact Us">
                         <span class="spanMain ContactUsIcon"></span>
                         <small class="TextMain TextHelper">Contact Us</small>
                     </a>

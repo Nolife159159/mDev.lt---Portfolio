@@ -4,5 +4,6 @@
 
 @section('content')
     <div class="bw">
+
     </div>
 @endsection

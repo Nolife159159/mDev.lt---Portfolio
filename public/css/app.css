@@ -64,7 +64,7 @@ html {
     top: 0;
     bottom: 0;
     left: 0;
-    width: 70px;
+    width: 120px;
     margin-top: 0;
     margin-bottom: 0;
     background-color: #2cb6f6;
@@ -200,15 +200,15 @@ html {
 
 .position > .navBarItemList > .tooltipai {
   position: relative;
-  padding: 10px 12px;
-  font-size: 18px;
-  color: white;
   text-align: center;
   border-radius: 0;
 }
 
 @media (min-width: 768px) {
   .position > .navBarItemList > .tooltipai {
+    padding: 10px 12px;
+    font-size: 18px;
+    color: white;
     padding: 15px;
   }
 }
@@ -218,7 +218,7 @@ html {
 }
 
 .position > .navBarItemList + .navBarItemList > .tooltipai {
-  /* border-left: 1px solid $NavbarColor; */
+  /*border-left: 1px solid red;*/
 }
 
 .position > .navBarItemList + .navBarItemList > .tooltipai.active,
@@ -289,7 +289,7 @@ html {
 
 @media (min-width: 768px) {
   .TextHelper {
-    display: none !important;
+    display: none;
   }
 }
 
@@ -402,6 +402,56 @@ input:focus {
   background-color: white;
   color: black;
   border: 2px solid -webkit-gradient(linear, left top, right top, color-stop(0%, #3ab1ab), color-stop(100%, #257498));
+}
+
+.activeMenu {
+  color: white;
+  background-color: #060614;
+}
+
+@media (max-width: 100px) {
+  .navBarItems.ul {
+    height: 100%;
+  }
+
+  .paddingNormal {
+    margin-top: 100%;
+    margin-bottom: 100%;
+  }
+}
+
+.navBarItems.ul {
+  height: 100%;
+}
+
+@media (max-width: 391px) {
+  .logo {
+    display: none;
+  }
+}
+
+@media (max-width: 481px) {
+  .logo {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo {
+    padding: 12px 10px;
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 769px) {
+  .logo {
+    margin-bottom: 160px;
+  }
+}
+
+.navBarItemList:hover {
+  color: white;
+  background-color: #060614;
 }
 
 /*!
