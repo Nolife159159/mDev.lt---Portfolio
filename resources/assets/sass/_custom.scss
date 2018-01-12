@@ -8,7 +8,7 @@ $enable-gradients:          true !default;
 html {
   min-height: 100%;
   background-image: url("/images/bg.png") !important;
-  background-size: cover;
+  background-size: 100% 100%;
 }
 
 .user-l {
@@ -390,4 +390,37 @@ textarea:focus, input:focus{
 .navBarItemList:hover {
   color: $ItemColor;
   background-color: $ActiveColor;
+  cursor: pointer;
+  -webkit-transition: background-color .5s ease-out;
+  -moz-transition: background-color .5s ease-out;
+  -o-transition: background-color .5s ease-out;
+  transition: background-color .5s ease-out;
+}
+/*content welcome*/
+@font-face {
+  font-family: 'swiss-font';
+  src: url('/fonts/vendor/swiss.ttf'); /* IE9 Compat Modes */
+}
+
+.content-text {
+  font-size: 16px;
+  font-family: swiss-font;
+  font-family: 'MyWebFont', Fallback, sans-serif;
+}
+
+.hello-text {
+   font-size: 40px;
+}
+
+.welcome {
+  width: 400px;
+  margin-top:320px;
+}
+
+.group-text > div {
+  transition: all .3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.3);
+  }
 }

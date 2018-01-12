@@ -3,7 +3,7 @@
 html {
   min-height: 100%;
   background-image: url("/images/bg.png") !important;
-  background-size: cover;
+  background-size: 100% 100%;
 }
 
 .user-l {
@@ -452,6 +452,42 @@ input:focus {
 .navBarItemList:hover {
   color: white;
   background-color: #060614;
+  cursor: pointer;
+  -webkit-transition: background-color .5s ease-out;
+  transition: background-color .5s ease-out;
+}
+
+/*content welcome*/
+
+@font-face {
+  font-family: 'swiss-font';
+  src: url("/fonts/vendor/swiss.ttf");
+  /* IE9 Compat Modes */
+}
+
+.content-text {
+  font-size: 16px;
+  font-family: swiss-font;
+  font-family: 'MyWebFont', Fallback, sans-serif;
+}
+
+.hello-text {
+  font-size: 40px;
+}
+
+.welcome {
+  width: 400px;
+  margin-top: 320px;
+}
+
+.group-text > div {
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.group-text > div:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
 }
 
 /*!
