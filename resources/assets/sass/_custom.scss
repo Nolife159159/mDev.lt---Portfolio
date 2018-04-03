@@ -280,7 +280,7 @@ html {
 }
 .MainContent {
   margin-right: auto;
-  margin-left: auto;
+  margin-left: 36px;
   padding-right: 10px;
   padding-left: 10px;
   width: 100%;
@@ -403,18 +403,18 @@ textarea:focus, input:focus{
 }
 
 .content-text {
-  font-size: 16px;
+  font-size: $ContentFontSize;
   font-family: swiss-font;
   font-family: 'MyWebFont', Fallback, sans-serif;
 }
 
 .hello-text {
-   font-size: 40px;
+   font-size: $HelloFontSize;
 }
 
 .welcome {
-  width: 400px;
-  margin-top:320px;
+  width: $WelcomeWidth;
+  margin-top: $WelcomeMargineTop;
 }
 
 .group-text > div {
@@ -423,4 +423,10 @@ textarea:focus, input:focus{
   &:hover {
     transform: scale(1.3);
   }
+}
+
+.AboutBg {
+  background: $AboutBackgroundColor;
+  width: 250.625em;
+  height: 143.75em;
 }
