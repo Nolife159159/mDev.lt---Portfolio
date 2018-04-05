@@ -182,7 +182,6 @@ html {
 }
 .position > .navBarItemList > .tooltipai {
   position: relative;
-
   text-align: center;
   border-radius: 0;
 }
@@ -315,6 +314,11 @@ html {
   margin-right: -15px;
   margin-left: -15px !important;
 }
+@media (max-width: 798px) {
+  .mainNavbar {
+    margin-bottom: 0px;
+  }
+}
 @media (min-width: 768px) {
   .row {
     display: -webkit-box;
@@ -427,6 +431,9 @@ textarea:focus, input:focus{
 
 .AboutBg {
   background: $AboutBackgroundColor;
+  background-size: 100% 100%;
+  min-height: 100%;
   width: 250.625em;
   height: 143.75em;
 }
+

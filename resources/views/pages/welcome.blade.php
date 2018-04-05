@@ -20,7 +20,7 @@
                 <div class="mb-3">We can install https protocol for your server!</div>
 
                 <div>We can fix your broken servers!</div>
-                <div >We can help to migrate to other server!</div>
+                <div class="mb-3">We can help to migrate to other server!</div>
             </div>
 
             <a href="{{ url('/our-work') }}" class="btn btn btn-outline-light btn-lg rounded-0 mt-5 pl-4 pr-4">Check our work</a>

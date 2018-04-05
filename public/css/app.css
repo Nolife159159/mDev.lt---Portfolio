@@ -368,6 +368,12 @@ html {
   margin-left: -15px !important;
 }
 
+@media (max-width: 798px) {
+  .mainNavbar {
+    margin-bottom: 0px;
+  }
+}
+
 @media (min-width: 768px) {
   .row {
     display: -webkit-box;
@@ -493,6 +499,8 @@ input:focus {
 
 .AboutBg {
   background: #141717;
+  background-size: 100% 100%;
+  min-height: 100%;
   width: 250.625em;
   height: 143.75em;
 }

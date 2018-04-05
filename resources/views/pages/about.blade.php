@@ -3,9 +3,8 @@
 @section('title', ' - About mDev')
 
 @section('content')
-    <div class="MainContent">
-        <div class="AboutBg">
-            <h4>Test</h4>
+    <div class="mx-auto AboutBg">
+        <div class="content-text text-center text-white">
         </div>
     </div>
 @endsection
