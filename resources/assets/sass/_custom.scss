@@ -7,7 +7,7 @@ $enable-gradients:          true !default;
 
 html {
   min-height: 100%;
-  background-image: url("/images/bg.png") !important;
+  background-image: url("/images/bg.png");
   background-size: 100% 100%;
 }
 
@@ -54,12 +54,12 @@ html {
     background: #c82333 linear-gradient(180deg, #d04451, #c82333) repeat-x !important;
   }
 }
-
 //new naw bar
 .mainNavbar {
   margin-top: -10px;
   margin-bottom: 30px;
   background: $NavbarColor;
+  position: relative;
 }
 @media (min-width: 768px) {
   .mainNavbar {
@@ -67,12 +67,11 @@ html {
     top: 0;
     bottom: 0;
     left: 0;
-    width: 120px;
+    width: 90px;
     margin-top: 0;
     margin-bottom: 0;
     background-color: $NavbarColor;
-    overflow-y: auto;
-    -webkit-transform: translate3d(0, 0, 0);
+    overflow: hidden;
   }
 }
 .mainNavbar .toolTip {
@@ -205,13 +204,13 @@ html {
 }
 .position > .navBarItemList + .navBarItemList > .toolTip.active .bz, .position > .navBarItemList + .navBarItemList > .toolTip.active:focus .bz, .position > .navBarItemList + .navBarItemList > .toolTip.active:hover .bz, .position > .navBarItemList + .navBarItemList > .toolTip.active:active .bz {
   border-color: $NavbarColor;
+  border-bottom: 0;
 }
 @media (min-width: 768px) {
   .position > .navBarItemList + .navBarItemList {
     margin-left: 0;
   }
   .position > .navBarItemList + .navBarItemList > .toolTip {
-    border-top: 1px solid $NavbarColor;
     border-right: 0;
   }
 }
@@ -243,15 +242,45 @@ html {
   left: 10px;
   color: #ccc;
 }
+
 .TextMain {
-  display: block;
   font-size: 11px;
 }
+
 @media (min-width: 768px) {
   .TextHelper {
-    display: none;
+    display:none;
+
   }
 }
+
+.toolTip {
+  &:hover {
+    .TextHelper {
+      display: inline-block;
+
+      position:fixed;
+      z-index: 1;
+
+      height: 67px;
+
+      margin-left: 26px;
+      margin-top: -15px;
+
+      color: $ItemColor;
+      background-color: $ActiveColor;
+
+      cursor: pointer;
+
+      padding:20px 30px;
+
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+  }
+}
+
+
 .AboutUsIcon:before {
   content: url("/images/AboutUsIcon.png");
 }
@@ -391,14 +420,15 @@ textarea:focus, input:focus{
   }
 }
 
+.navBarItemList {
+  min-height: 67px;
+  max-height: 67px;
+}
+
 .navBarItemList:hover {
   color: $ItemColor;
   background-color: $ActiveColor;
   cursor: pointer;
-  -webkit-transition: background-color .5s ease-out;
-  -moz-transition: background-color .5s ease-out;
-  -o-transition: background-color .5s ease-out;
-  transition: background-color .5s ease-out;
 }
 /*content welcome*/
 @font-face {

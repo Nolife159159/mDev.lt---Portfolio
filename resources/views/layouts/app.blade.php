@@ -85,8 +85,9 @@
     <div class="moving-clouds"></div>
 </div>
 
-@yield('scripts')
-<!-- Scripts -->
 <script src="{{ asset('js/app.js') }}"></script>
+<!-- Scripts -->
+@yield('scripts')
+
 </body>
 </html>
