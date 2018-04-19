@@ -75,7 +75,7 @@ html {
     -webkit-transform: translate3d(0, 0, 0);
   }
 }
-.mainNavbar .tooltip {
+.mainNavbar .toolTip {
   white-space: nowrap;
 }
 .Icon {
@@ -180,13 +180,13 @@ html {
     display: block;
   }
 }
-.position > .navBarItemList > .tooltipai {
+.position > .navBarItemList > .toolTip {
   position: relative;
   text-align: center;
   border-radius: 0;
 }
 @media (min-width: 768px) {
-  .position > .navBarItemList > .tooltipai {
+  .position > .navBarItemList > .toolTip {
     padding: 10px 12px;
     font-size: 18px;
     color: $ItemColor;
@@ -196,26 +196,26 @@ html {
 .position > .navBarItemList + .navBarItemList {
   margin-left: -3px;
 }
-.position > .navBarItemList + .navBarItemList > .tooltipai {
+.position > .navBarItemList + .navBarItemList > .toolTip {
    /*border-left: 1px solid red;*/
 }
-.position > .navBarItemList + .navBarItemList > .tooltipai.active, .position > .navBarItemList + .navBarItemList > .tooltipai.active:focus, .position > .navBarItemList + .navBarItemList > .tooltipai.active:hover, .position > .navBarItemList + .navBarItemList > .tooltipai.active:active {
+.position > .navBarItemList + .navBarItemList > .toolTip.active, .position > .navBarItemList + .navBarItemList > .toolTip.active:focus, .position > .navBarItemList + .navBarItemList > .toolTip.active:hover, .position > .navBarItemList + .navBarItemList > .toolTip.active:active {
   color: $ItemColor;
   background-color: $ActiveColor;
 }
-.position > .navBarItemList + .navBarItemList > .tooltipai.active .bz, .position > .navBarItemList + .navBarItemList > .tooltipai.active:focus .bz, .position > .navBarItemList + .navBarItemList > .tooltipai.active:hover .bz, .position > .navBarItemList + .navBarItemList > .tooltipai.active:active .bz {
+.position > .navBarItemList + .navBarItemList > .toolTip.active .bz, .position > .navBarItemList + .navBarItemList > .toolTip.active:focus .bz, .position > .navBarItemList + .navBarItemList > .toolTip.active:hover .bz, .position > .navBarItemList + .navBarItemList > .toolTip.active:active .bz {
   border-color: $NavbarColor;
 }
 @media (min-width: 768px) {
   .position > .navBarItemList + .navBarItemList {
     margin-left: 0;
   }
-  .position > .navBarItemList + .navBarItemList > .tooltipai {
+  .position > .navBarItemList + .navBarItemList > .toolTip {
     border-top: 1px solid $NavbarColor;
     border-right: 0;
   }
 }
-.position > .navBarItemList > .tooltipai > img {
+.position > .navBarItemList > .toolTip > img {
   width: 26px;
   margin: 0 auto;
 }
@@ -227,14 +227,14 @@ html {
     flex-direction: column !important;
   }
 }
-.tooltipai {
+.toolTip {
   display: block;
   padding: 0.5rem 1rem;
 }
-.tooltipai:focus, .tooltipai:hover {
+.toolTip:focus, .toolTip:hover {
   text-decoration: none;
 }
-.tooltipai.disabled {
+.toolTip.disabled {
   color: #868e96;
 }
 .bld > .spanMain {
