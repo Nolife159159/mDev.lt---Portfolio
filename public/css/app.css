@@ -218,7 +218,7 @@ html {
 }
 
 .position > .navBarItemList + .navBarItemList > .toolTip {
-  /*border-left: 1px solid red;*/
+  border: none;
 }
 
 .position > .navBarItemList + .navBarItemList > .toolTip.active,
@@ -234,7 +234,7 @@ html {
 .position > .navBarItemList + .navBarItemList > .toolTip.active:hover .bz,
 .position > .navBarItemList + .navBarItemList > .toolTip.active:active .bz {
   border-color: #2cb6f6;
-  border-bottom: 0;
+  border-bottom: none;
 }
 
 @media (min-width: 768px) {
@@ -307,12 +307,28 @@ html {
   font-size: 14px;
 }
 
+.activeButtonNav {
+  display: inline-block;
+  position: fixed;
+  z-index: 1;
+  height: 67px;
+  margin-left: 26px;
+  margin-top: -15px;
+  color: white;
+  background-color: #060614;
+  cursor: pointer;
+  padding: 20px 30px;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
 .AboutUsIcon:before {
   content: url("/images/AboutUsIcon.png");
 }
 
 .OurSkilIcon:before {
   content: url("/images/OurSkilIcon.png");
+  min-width: 32px;
 }
 
 .OurWorkIcon:before {

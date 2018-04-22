@@ -196,7 +196,7 @@ html {
   margin-left: -3px;
 }
 .position > .navBarItemList + .navBarItemList > .toolTip {
-   /*border-left: 1px solid red;*/
+  border: none;
 }
 .position > .navBarItemList + .navBarItemList > .toolTip.active, .position > .navBarItemList + .navBarItemList > .toolTip.active:focus, .position > .navBarItemList + .navBarItemList > .toolTip.active:hover, .position > .navBarItemList + .navBarItemList > .toolTip.active:active {
   color: $ItemColor;
@@ -204,7 +204,7 @@ html {
 }
 .position > .navBarItemList + .navBarItemList > .toolTip.active .bz, .position > .navBarItemList + .navBarItemList > .toolTip.active:focus .bz, .position > .navBarItemList + .navBarItemList > .toolTip.active:hover .bz, .position > .navBarItemList + .navBarItemList > .toolTip.active:active .bz {
   border-color: $NavbarColor;
-  border-bottom: 0;
+  border-bottom: none;
 }
 @media (min-width: 768px) {
   .position > .navBarItemList + .navBarItemList {
@@ -255,7 +255,7 @@ html {
 }
 
 .toolTip {
-  &:hover {
+    &:hover {
     .TextHelper {
       display: inline-block;
 
@@ -280,12 +280,34 @@ html {
   }
 }
 
+.activeButtonNav {
+  display: inline-block;
+
+  position:fixed;
+  z-index: 1;
+
+  height: 67px;
+
+  margin-left: 26px;
+  margin-top: -15px;
+
+  color: $ItemColor;
+  background-color: $ActiveColor;
+
+  cursor: pointer;
+
+  padding:20px 30px;
+
+  text-transform: uppercase;
+  font-size: 14px;
+}
 
 .AboutUsIcon:before {
   content: url("/images/AboutUsIcon.png");
 }
 .OurSkilIcon:before {
   content: url("/images/OurSkilIcon.png");
+  min-width: 32px;
 }
 .OurWorkIcon:before {
   content: url("/images/OurWorkIcon.png");

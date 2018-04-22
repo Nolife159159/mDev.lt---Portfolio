@@ -15,36 +15,36 @@
             <div class="navBarItems">
                 <ul class="nav ListHelper position ListHelper2">
                     <li class="navBarItemList logo">
-                        <a class="toolTip" href="{{ url('/') }}">{{ config('app.name') }}</a>
+                        <a class="toolTip" href="{{ url('/') }}">mDev</a>
                     </li>
                     <li class="navBarItemList">
                         <a class="toolTip {{ Request::is('/') ? 'activeMenu' : '' }}" href="{{ url('/') }}" title="" data-toggle="tooltip" data-placement="right" data-container="body" data-original-title="Homepage">
                             <span class="spanMain HomeIcon"></span>
-                            <small class="TextMain TextHelper">Home page</small>
+                            <small class="TextMain TextHelper {{ Request::is('/') ? 'activeButtonNav' : '' }}">Home page</small>
                         </a>
                     </li>
                     <li class="navBarItemList">
                         <a class="toolTip {{ Request::is('about-us') ? 'activeMenu' : '' }}" href="{{ url('/about-us') }}" title="" data-toggle="tooltip" data-placement="right" data-container="body" data-original-title="About US">
                             <span class="spanMain AboutUsIcon"></span>
-                            <small class="TextMain TextHelper">About US</small>
+                            <small class="TextMain TextHelper {{ Request::is('about-us') ? 'activeButtonNav' : '' }}">About US</small>
                         </a>
                     </li>
                     <li class="navBarItemList">
                         <a class="toolTip {{ Request::is('our-skills') ? 'activeMenu' : '' }}" href="{{ url('/our-skills') }}" title="" data-toggle="tooltip" data-placement="right" data-container="body" data-original-title="Our Skills">
                             <span class="spanMain OurSkilIcon"></span>
-                            <small class="TextMain TextHelper">Our Skills</small>
+                            <small class="TextMain TextHelper {{ Request::is('our-skills') ? 'activeButtonNav' : '' }}">Our Skills</small>
                         </a>
                     </li>
                     <li class="navBarItemList">
-                        <a class="toolTip  {{ Request::is('our-work') ? 'activeMenu' : '' }}" href="{{ url('/our-work') }}" title="" data-toggle="tooltip" data-placement="right" data-container="body" data-original-title="Our Work">
+                        <a class="toolTip {{ Request::is('our-work') ? 'activeMenu' : '' }}" href="{{ url('/our-work') }}" title="" data-toggle="tooltip" data-placement="right" data-container="body" data-original-title="Our Work">
                             <span class="spanMain OurWorkIcon"></span>
-                            <small class="TextMain TextHelper">Our Work</small>
+                            <small class="TextMain TextHelper {{ Request::is('our-work') ? 'activeButtonNav' : '' }}">Our Work</small>
                         </a>
                     </li>
                     <li class="navBarItemList">
                         <a class="toolTip {{ Request::is('contact-us') ? 'activeMenu' : '' }}" href="{{ url('/contact-us') }}" title="" data-toggle="tooltip" data-placement="right" data-container="body" data-original-title="Contact Us">
                             <span class="spanMain ContactUsIcon"></span>
-                            <small class="TextMain TextHelper">Contact Us</small>
+                            <small class="TextMain TextHelper {{ Request::is('contact-us') ? 'activeButtonNav' : '' }}">Contact Us</small>
                         </a>
                     </li>
                 </ul>
